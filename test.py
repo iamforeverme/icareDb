@@ -1,0 +1,6 @@
+colName = ('type','mac','att')
+colVal = ('v1','123','dd')
+#print([" = ".join((part[0],"\'"+part[1]+"\'")) for part in tuple(zip(colName,colVal))])
+print("  and ".join((" = ".join((part[0],"\'"+part[1]+"\'")) for part in tuple(zip(colName,colVal)))))
+#print(" ".join(( for part in tuple(zip(colName,colVal)))))
+#print(" \' and \'".join(tuple(zip(colName,colVal))))
