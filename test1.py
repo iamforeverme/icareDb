@@ -3,9 +3,11 @@ from icareLogger import getLogger
 logger = getLogger("iCareDb")
 
 
-class iCareDb:
-	def __init__(self):
-		self._dbconnection = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd="#bigguy", db='icare')
+class MySqlDb:
+	def __init__(self,host,port,user,passwd,db):
+		logger.debug("connect database : host %s ;  port %s ; user %s ; passwd %s ; db %s" % (host, port, user, passwd, db))
+		self._dbconnection = pymysql.connect(host, port=port, user=user, passwd=passwd, db=db)
+
 	def __del__( self ):
 		self._dbconnection.close();
 
@@ -20,33 +22,6 @@ class iCareDb:
 		    if cur :
 		    	cur.close()
 		    	self._dbconnection.rollback()
-	
-
-	def addCushion(self,type,mac):
-		self._addContent('cushion',('type','cushion_mac'),(type,mac))
-
-	def deleteCushion(self,mac):
-		idList = self._getId('cushion',('cushion_mac',),(mac,))
-		for id in idList:
-			self._rmContent('cushion',id)
-	def addRouter(self,type,mac):
-		self._addContent('router',('type','routerco_mac'),(type,mac))
-
-	def deleteRouter(self,mac):
-		idList = self._getId('router',('routerco_mac',),(mac,))
-		for id in idList:
-			self._rmContent('router',id)
-		# cur = None
-		# logger.debug("deleteCushion : %s" % (mac))
-		# try:
-		#     cur = self._dbconnection.cursor()
-		#     selectStatement =  "delete from cushion WHERE cushion_mac = '%s';"%mac
-		#     self.__execute_sql(cur, selectStatement)
-		#     self._dbconnection.commit()
-		# finally :
-		#     if cur :
-		#     	cur.close()
-		#     	self._dbconnection.rollback()
 
 	def _getId(self,table,colName,colVal):
 		cur = None
@@ -61,7 +36,10 @@ class iCareDb:
 		    if cur :
 		    	cur.close()
 		    	self._dbconnection.rollback()
-		return allRows[0]
+		if(allRows):
+			return allRows[0]
+		else:
+			return None
 
 	def _rmContent(self,table,id):
 		cur = None
@@ -75,6 +53,37 @@ class iCareDb:
 		    if cur :
 		    	cur.close()
 		    	self._dbconnection.rollback()
+
+	def _updateContent(self,table,id,colName,colVal):
+		cur = None
+		logger.debug("_updateContent : %s %s" % (table,id))
+		try:
+		    cur = self._dbconnection.cursor()
+		    selectStatement =  "update %s set %s WHERE id = %s;"%(table," , ".join((" = ".join((part[0],"\'"+part[1]+"\'")) for part in tuple(zip(colName,colVal)))),id)
+		    self.__execute_sql(cur, selectStatement)
+		    self._dbconnection.commit()
+		finally :
+		    if cur :
+		    	cur.close()
+		    	self._dbconnection.rollback()
+
+	def _getVal(self,table,id,colName):
+		cur = None
+		logger.debug("_getVal : %s " % (','.join(colName)))
+		try:
+		    cur = self._dbconnection.cursor()
+		    selectStatement =  "select %s from %s WHERE id = %s;"%(','.join(colName),table,id)
+		    logger.debug(selectStatement)
+		    self.__execute_sql(cur, selectStatement)
+		    allRows = cur.fetchall()
+		finally :
+		    if cur :
+		    	cur.close()
+		    	self._dbconnection.rollback()
+		if(allRows):
+			return allRows[0]
+		else:
+			return None
 
 	def _addContent(self,table,colName,colVal):
 		cur = None
@@ -92,21 +101,3 @@ class iCareDb:
 	def __execute_sql(self, cur, sqlStatement):
 		logger.debug("Executing : %s" % sqlStatement)
 		return cur.execute(sqlStatement)
-
-		# cur = None
-		# logger.debug("addCushion : %s %s" % (cushionType,mac))
-		# try:
-		#     cur = self._dbconnection.cursor()
-		#     selectStatement = "insert into cushion (type,cushion_mac) values ('%s' ,'%s')"%(cushionType,mac)
-		#     self.__execute_sql(cur, selectStatement)
-		#     self._dbconnection.commit()
-		# finally :
-		#     if cur :
-		#     	cur.close()
-		#     	self._dbconnection.rollback()
-
-        
-
-if __name__ == "__main__":
-	db = iCareDb();
-	print(db.query("show tables;"))
