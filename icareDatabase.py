@@ -1,26 +1,24 @@
-import pymysql
+from MySqlDb import MySqlDb
 from icareLogger import getLogger
 logger = getLogger("iCareDb")
 
 
-class iCareDb:
+class iCareDb (MySqlDb):
 	def __init__(self):
-		self._dbconnection = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd="#bigguy", db='icare')
-	def __del__( self ):
-		self._dbconnection.close();
+		super(iCareDb, self).__init__(host='127.0.0.1', port=3306, user='root', passwd="#bigguy", db='icare')
 
-	def query(self, selectStatement):
-		cur = None
-		try:
-		    cur = self._dbconnection.cursor()
-		    self.__execute_sql(cur, selectStatement)
-		    allRows = cur.fetchall()
-		    return allRows
-		finally :
-		    if cur :
-		    	cur.close()
-		    	self._dbconnection.rollback()
-	
+	def add(self,table,para):
+		self._addContent(table,para.keys(),para.values())
+
+	def rm(self,table,idList):
+		for id in idList:
+			self._rmContent(table,id)
+
+	def queryId(self,table,para):
+		return self._getId(table,para.keys(),para.values())
+
+
+
 
 	def addCushion(self,type,mac):
 		self._addContent('cushion',('type','cushion_mac'),(type,mac))
@@ -36,74 +34,39 @@ class iCareDb:
 		idList = self._getId('router',('routerco_mac',),(mac,))
 		for id in idList:
 			self._rmContent('router',id)
-		# cur = None
-		# logger.debug("deleteCushion : %s" % (mac))
-		# try:
-		#     cur = self._dbconnection.cursor()
-		#     selectStatement =  "delete from cushion WHERE cushion_mac = '%s';"%mac
-		#     self.__execute_sql(cur, selectStatement)
-		#     self._dbconnection.commit()
-		# finally :
-		#     if cur :
-		#     	cur.close()
-		#     	self._dbconnection.rollback()
 
-	def _getId(self,table,colName,colVal):
-		cur = None
-		logger.debug("_getId : %s ; %s" % (','.join(colName),','.join(colVal)))
-		try:
-		    cur = self._dbconnection.cursor()
-		    selectStatement =  "select id from %s WHERE %s;"%(table," and ".join((" = ".join((part[0],"\'"+part[1]+"\'")) for part in tuple(zip(colName,colVal)))))
-		    self.__execute_sql(cur, selectStatement)
-		    allRows = cur.fetchall()
-		    logger.debug(allRows)
-		finally :
-		    if cur :
-		    	cur.close()
-		    	self._dbconnection.rollback()
-		return allRows[0]
+	def addSignalType(self,type):
+		self._addContent('signal_type',('type',),(type,))
 
-	def _rmContent(self,table,id):
-		cur = None
-		logger.debug("_rmContent : %s %s" % (table,id))
-		try:
-		    cur = self._dbconnection.cursor()
-		    selectStatement =  "delete from %s WHERE id = %s;"%(table,id)
-		    self.__execute_sql(cur, selectStatement)
-		    self._dbconnection.commit()
-		finally :
-		    if cur :
-		    	cur.close()
-		    	self._dbconnection.rollback()
+	def deleteSignalType(self,type):
+		idList = self._getId('signal_type',('type',),(type,))
+		for id in idList:
+			self._rmContent('signal_type',id)
 
-	def _addContent(self,table,colName,colVal):
-		cur = None
-		logger.debug("_addContent : %s ; %s" % (','.join(colName),','.join(colVal)))
-		try:
-		    cur = self._dbconnection.cursor()
-		    selectStatement = "insert into %s (%s) values ('%s')"%(table,','.join(colName),"\',\'".join(colVal))
-		    self.__execute_sql(cur, selectStatement)
-		    self._dbconnection.commit()
-		finally :
-		    if cur :
-		    	cur.close()
-		    	self._dbconnection.rollback()
+	def addWarningType(self,type):
+		self._addContent('warning_type',('type',),(type,))
 
-	def __execute_sql(self, cur, sqlStatement):
-		logger.debug("Executing : %s" % sqlStatement)
-		return cur.execute(sqlStatement)
+	def deleteWarningType(self,type):
+		idList = self._getId('warning_type',('type',),(type,))
+		for id in idList:
+			self._rmContent('warning_type',id)
 
-		# cur = None
-		# logger.debug("addCushion : %s %s" % (cushionType,mac))
-		# try:
-		#     cur = self._dbconnection.cursor()
-		#     selectStatement = "insert into cushion (type,cushion_mac) values ('%s' ,'%s')"%(cushionType,mac)
-		#     self.__execute_sql(cur, selectStatement)
-		#     self._dbconnection.commit()
-		# finally :
-		#     if cur :
-		#     	cur.close()
-		#     	self._dbconnection.rollback()
+	def addQuickSolution(self,solution):
+		self._addContent('quick_solution',('solution',),(solution,))
+
+	def deleteQuickSolution(self,solution):
+		idList = self._getId('quick_solution',('solution',),(solution,))
+		for id in idList:
+			self._rmContent('quick_solution',id)
+
+	def addSetting(self,att,value):
+		self._addContent('setting',('attribute','value'),(att,value))
+
+	def deleteSetting(self,att):
+		idList = self._getId('setting',('attribute',),(att,))
+		for id in idList:
+			self._rmContent('setting',id)
+
 
         
 
