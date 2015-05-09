@@ -132,6 +132,90 @@ class iCareDatabaseTestCase(unittest.TestCase):
 		self._db.rm("protege",(protegeId,))
 		self._db.rm("staff",(staffId,))
 
+	def testStaffOnline(self):
+		self._db.add("staff",{'staff_id':"212328000",'name':"Xiaoming","id_card_num":"150204xxxxxxx","password":"helloWorld"})
+		staffId = self._db.queryId("staff",{"id_card_num":"150204xxxxxxx"})[0]
+		self._db.add("staff_online",{'staff_id':staffId})
+		onlineId = self._db.queryId("staff_online",{'staff_id':staffId})[0]
+		assert( onlineId )
+		self._db.rm("staff",(staffId,))
+		
+	def testLocation(self):
+		self._db.add("cushion",{'type':"r1v1",'cushion_mac':"TEST001C"})
+		self._db.add("router",{'type':"r1v1",'routerco_mac':"TEST001R"})
+		self._db.add("protege",{'gender':"male",'name':"XiaoHe","id_card_num":"150214xxxxxxx","mobile":"13033331234","contacts_name1":"XiaoWang","contacts_tel1":"13033333214"})
+
+		cushionId = self._db.queryId("cushion",{"cushion_mac":"TEST001C"})[0]
+		routerId = self._db.queryId("router",{"routerco_mac":"TEST001R"})[0]
+		protegeId = self._db.queryId("protege",{"id_card_num":"150214xxxxxxx"})[0]
+		self._db.add("location",{'cushion_id':cushionId,'router_id':routerId,"protege_id":protegeId})
+
+		locationId = self._db.queryId("location",{'router_id':routerId,'protege_id':protegeId,'cushion_id':cushionId})[0]
+		assert( locationId )
+
+		self._db.rm("router",(routerId,))
+		self._db.rm("cushion",(cushionId,))
+		self._db.rm("protege",(protegeId,))
+
+	def testMonitorData(self):
+		self._db.add("cushion",{'type':"r1v1",'cushion_mac':"TEST001C"})
+		self._db.add("router",{'type':"r1v1",'routerco_mac':"TEST001R"})
+		self._db.add("protege",{'gender':"male",'name':"XiaoHe","id_card_num":"150214xxxxxxx","mobile":"13033331234","contacts_name1":"XiaoWang","contacts_tel1":"13033333214"})
+
+		cushionId = self._db.queryId("cushion",{"cushion_mac":"TEST001C"})[0]
+		routerId = self._db.queryId("router",{"routerco_mac":"TEST001R"})[0]
+		protegeId = self._db.queryId("protege",{"id_card_num":"150214xxxxxxx"})[0]
+		self._db.add("location",{'cushion_id':cushionId,'router_id':routerId,"protege_id":protegeId})
+		locationId = self._db.queryId("location",{'router_id':routerId,'protege_id':protegeId,'cushion_id':cushionId})[0]
+
+		self._db.add("signal_type",{'type':"r1v1"})
+		signalTypeId = self._db.queryId("signal_type",{"type":"r1v1"})[0]
+
+		self._db.add("monitor_data",{'signal_id':signalTypeId,'location_id':locationId})
+		dataId = self._db.queryId("monitor_data",{'signal_id':signalTypeId,'location_id':locationId})[0]
+		assert( dataId )
+
+		self._db.rm("router",(routerId,))
+		self._db.rm("cushion",(cushionId,))
+		self._db.rm("protege",(protegeId,))
+		self._db.rm("signal_type",(signalTypeId,))
+
+	def testWarning(self):
+		self._db.add("cushion",{'type':"r1v1",'cushion_mac':"TEST001C"})
+		self._db.add("router",{'type':"r1v1",'routerco_mac':"TEST001R"})
+		self._db.add("protege",{'gender':"male",'name':"XiaoHe","id_card_num":"150214xxxxxxx","mobile":"13033331234","contacts_name1":"XiaoWang","contacts_tel1":"13033333214"})
+
+		cushionId = self._db.queryId("cushion",{"cushion_mac":"TEST001C"})[0]
+		routerId = self._db.queryId("router",{"routerco_mac":"TEST001R"})[0]
+		protegeId = self._db.queryId("protege",{"id_card_num":"150214xxxxxxx"})[0]
+		self._db.add("location",{'cushion_id':cushionId,'router_id':routerId,"protege_id":protegeId})
+		locationId = self._db.queryId("location",{'router_id':routerId,'protege_id':protegeId,'cushion_id':cushionId})[0]
+
+		self._db.add("signal_type",{'type':"r1v1"})
+		signalTypeId = self._db.queryId("signal_type",{"type":"r1v1"})[0]
+
+		self._db.add("monitor_data",{'signal_id':signalTypeId,'location_id':locationId})
+		dataId = self._db.queryId("monitor_data",{'signal_id':signalTypeId,'location_id':locationId})[0]
+
+		self._db.add("warning_type",{'type':"r1v1"})
+		warningTypeId = self._db.queryId("warning_type",{"type":"r1v1"})[0]
+
+		self._db.add("staff",{'staff_id':"212328000",'name':"Xiaoming","id_card_num":"150204xxxxxxx","password":"helloWorld"})
+		staffId = self._db.queryId("staff",{"staff_id":"212328000"})[0]
+
+
+		self._db.add("warning",{'data_id':dataId,'process_staff_id':staffId,'warning_id':warningTypeId})
+		warningId = self._db.queryId("warning",{'data_id':dataId,'process_staff_id':staffId,'warning_id':warningTypeId})[0]
+
+
+		assert( warningId )
+
+		self._db.rm("staff",(staffId,))
+		self._db.rm("warning_type",(warningTypeId,))
+		self._db.rm("router",(routerId,))
+		self._db.rm("cushion",(cushionId,))
+		self._db.rm("protege",(protegeId,))
+		self._db.rm("signal_type",(signalTypeId,))
 
 
 	def testException(self):

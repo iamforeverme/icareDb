@@ -1,0 +1,725 @@
+2015-05-09 20:09:30,443 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:09:30,460 - DEBUG: Executing : show tables;
+2015-05-09 20:09:30,460 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:09:30,463 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:09:30,464 - DEBUG: _addContent : dict_keys(['type', 'cushion_mac']) ; dict_values(['r1v1', 'TEST001C'])
+2015-05-09 20:09:30,466 - DEBUG: Executing : insert into cushion (type,cushion_mac) values ('r1v1' , 'TEST001C');
+2015-05-09 20:09:36,466 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:09:36,489 - DEBUG: Executing : show tables;
+2015-05-09 20:09:36,490 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:09:36,492 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:09:36,493 - DEBUG: _addContent : dict_keys(['type', 'cushion_mac']) ; dict_values(['r1v1', 'TEST001C'])
+2015-05-09 20:09:36,494 - DEBUG: Executing : insert into cushion (type,cushion_mac) values ('r1v1' , 'TEST001C');
+2015-05-09 20:09:36,496 - DEBUG: _addContent : dict_keys(['type', 'routerco_mac']) ; dict_values(['r1v1', 'TEST001R'])
+2015-05-09 20:09:36,496 - DEBUG: Executing : insert into router (type,routerco_mac) values ('r1v1' , 'TEST001R');
+2015-05-09 20:09:36,499 - DEBUG: _addContent : dict_keys(['name', 'mobile', 'gender', 'contacts_name1', 'contacts_tel1', 'id_card_num']) ; dict_values(['XiaoHe', '13033331234', 'male', 'XiaoWang', '13033333214', '150214xxxxxxx'])
+2015-05-09 20:09:36,499 - DEBUG: Executing : insert into protege (name,mobile,gender,contacts_name1,contacts_tel1,id_card_num) values ('XiaoHe' , '13033331234' , 'male' , 'XiaoWang' , '13033333214' , '150214xxxxxxx');
+2015-05-09 20:09:36,500 - DEBUG: _getId : dict_keys(['cushion_mac']) ; dict_values(['TEST001C'])
+2015-05-09 20:09:36,500 - DEBUG: select id from cushion WHERE   cushion_mac = 'TEST001C';
+2015-05-09 20:09:36,500 - DEBUG: Executing : select id from cushion WHERE   cushion_mac = 'TEST001C';
+2015-05-09 20:09:36,502 - DEBUG: _getId : dict_keys(['routerco_mac']) ; dict_values(['TEST001R'])
+2015-05-09 20:09:36,502 - DEBUG: select id from router WHERE   routerco_mac = 'TEST001R';
+2015-05-09 20:09:36,502 - DEBUG: Executing : select id from router WHERE   routerco_mac = 'TEST001R';
+2015-05-09 20:09:36,503 - DEBUG: _getId : dict_keys(['id_card_num']) ; dict_values(['150214xxxxxxx'])
+2015-05-09 20:09:36,503 - DEBUG: select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:09:36,503 - DEBUG: Executing : select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:09:36,503 - DEBUG: _addContent : dict_keys(['router_id', 'cushion_id', 'protege_id']) ; dict_values([25, 29, 68])
+2015-05-09 20:09:36,503 - DEBUG: Executing : insert into location (router_id,cushion_id,protege_id) values (25 , 29 , 68);
+2015-05-09 20:09:36,506 - DEBUG: _getId : dict_keys(['router_id', 'cushion_id', 'protege_id']) ; dict_values([25, 29, 68])
+2015-05-09 20:09:36,506 - DEBUG: select id from location WHERE   router_id = 25  and  cushion_id = 29  and  protege_id = 68;
+2015-05-09 20:09:36,506 - DEBUG: Executing : select id from location WHERE   router_id = 25  and  cushion_id = 29  and  protege_id = 68;
+2015-05-09 20:09:36,507 - DEBUG: _addContent : dict_keys(['type']) ; dict_values(['r1v1'])
+2015-05-09 20:09:36,507 - DEBUG: Executing : insert into signal_type (type) values ('r1v1');
+2015-05-09 20:09:36,509 - DEBUG: _getId : dict_keys(['type']) ; dict_values(['r1v1'])
+2015-05-09 20:09:36,510 - DEBUG: select id from signal_type WHERE   type = 'r1v1';
+2015-05-09 20:09:36,510 - DEBUG: Executing : select id from signal_type WHERE   type = 'r1v1';
+2015-05-09 20:09:36,512 - DEBUG: _addContent : dict_keys(['location_id', 'signal_id']) ; dict_values([10, (20,)])
+2015-05-09 20:09:36,512 - DEBUG: Executing : insert into monitor_data (location_id,signal_id) values (10 , (20,));
+2015-05-09 20:10:08,002 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:10:08,019 - DEBUG: Executing : show tables;
+2015-05-09 20:10:08,019 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:10:08,022 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:10:08,023 - DEBUG: _addContent : dict_keys(['type', 'cushion_mac']) ; dict_values(['r1v1', 'TEST001C'])
+2015-05-09 20:10:08,023 - DEBUG: Executing : insert into cushion (type,cushion_mac) values ('r1v1' , 'TEST001C');
+2015-05-09 20:10:08,026 - DEBUG: _addContent : dict_keys(['type', 'routerco_mac']) ; dict_values(['r1v1', 'TEST001R'])
+2015-05-09 20:10:08,026 - DEBUG: Executing : insert into router (type,routerco_mac) values ('r1v1' , 'TEST001R');
+2015-05-09 20:10:08,028 - DEBUG: _addContent : dict_keys(['name', 'mobile', 'gender', 'contacts_name1', 'contacts_tel1', 'id_card_num']) ; dict_values(['XiaoHe', '13033331234', 'male', 'XiaoWang', '13033333214', '150214xxxxxxx'])
+2015-05-09 20:10:08,028 - DEBUG: Executing : insert into protege (name,mobile,gender,contacts_name1,contacts_tel1,id_card_num) values ('XiaoHe' , '13033331234' , 'male' , 'XiaoWang' , '13033333214' , '150214xxxxxxx');
+2015-05-09 20:10:08,030 - DEBUG: _getId : dict_keys(['cushion_mac']) ; dict_values(['TEST001C'])
+2015-05-09 20:10:08,030 - DEBUG: select id from cushion WHERE   cushion_mac = 'TEST001C';
+2015-05-09 20:10:08,030 - DEBUG: Executing : select id from cushion WHERE   cushion_mac = 'TEST001C';
+2015-05-09 20:10:08,030 - DEBUG: _getId : dict_keys(['routerco_mac']) ; dict_values(['TEST001R'])
+2015-05-09 20:10:08,032 - DEBUG: select id from router WHERE   routerco_mac = 'TEST001R';
+2015-05-09 20:10:08,032 - DEBUG: Executing : select id from router WHERE   routerco_mac = 'TEST001R';
+2015-05-09 20:10:08,032 - DEBUG: _getId : dict_keys(['id_card_num']) ; dict_values(['150214xxxxxxx'])
+2015-05-09 20:10:08,032 - DEBUG: select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:10:08,032 - DEBUG: Executing : select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:10:08,032 - DEBUG: _addContent : dict_keys(['router_id', 'cushion_id', 'protege_id']) ; dict_values([26, 30, 69])
+2015-05-09 20:10:08,032 - DEBUG: Executing : insert into location (router_id,cushion_id,protege_id) values (26 , 30 , 69);
+2015-05-09 20:10:08,036 - DEBUG: _getId : dict_keys(['router_id', 'cushion_id', 'protege_id']) ; dict_values([26, 30, 69])
+2015-05-09 20:10:08,036 - DEBUG: select id from location WHERE   router_id = 26  and  cushion_id = 30  and  protege_id = 69;
+2015-05-09 20:10:08,038 - DEBUG: Executing : select id from location WHERE   router_id = 26  and  cushion_id = 30  and  protege_id = 69;
+2015-05-09 20:10:08,038 - DEBUG: _addContent : dict_keys(['type']) ; dict_values(['r1v1'])
+2015-05-09 20:10:08,038 - DEBUG: Executing : insert into signal_type (type) values ('r1v1');
+2015-05-09 20:10:08,039 - DEBUG: _getId : dict_keys(['type']) ; dict_values(['r1v1'])
+2015-05-09 20:10:08,039 - DEBUG: select id from signal_type WHERE   type = 'r1v1';
+2015-05-09 20:10:08,040 - DEBUG: Executing : select id from signal_type WHERE   type = 'r1v1';
+2015-05-09 20:10:08,040 - DEBUG: _addContent : dict_keys(['location_id', 'signal_id']) ; dict_values([11, 21])
+2015-05-09 20:10:08,040 - DEBUG: Executing : insert into monitor_data (location_id,signal_id) values (11 , 21);
+2015-05-09 20:10:08,056 - DEBUG: _getId : dict_keys(['location_id', 'signal_id']) ; dict_values([11, 21])
+2015-05-09 20:10:08,056 - DEBUG: select id from monitor_data WHERE   location_id = 11  and  signal_id = 21;
+2015-05-09 20:10:08,058 - DEBUG: Executing : select id from monitor_data WHERE   location_id = 11  and  signal_id = 21;
+2015-05-09 20:10:08,058 - DEBUG: Executing : delete from router WHERE id = 26;
+2015-05-09 20:10:08,061 - DEBUG: Executing : delete from cushion WHERE id = 30;
+2015-05-09 20:10:08,065 - DEBUG: Executing : delete from protege WHERE id = 69;
+2015-05-09 20:10:08,068 - DEBUG: Executing : delete from signal_type WHERE id = 21;
+2015-05-09 20:10:19,405 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:10:19,424 - DEBUG: _addContent : dict_keys(['name', 'mobile', 'gender', 'contacts_name1', 'contacts_tel1', 'id_card_num']) ; dict_values(['XiaoHe', '13033331234', 'male', 'XiaoWang', '13033333214', '150214xxxxxxx'])
+2015-05-09 20:10:19,424 - DEBUG: Executing : insert into protege (name,mobile,gender,contacts_name1,contacts_tel1,id_card_num) values ('XiaoHe' , '13033331234' , 'male' , 'XiaoWang' , '13033333214' , '150214xxxxxxx');
+2015-05-09 20:10:19,426 - DEBUG: _addContent : dict_keys(['staff_id', 'password', 'name', 'id_card_num']) ; dict_values(['212328000', 'helloWorld', 'Xiaoming', '150204xxxxxxx'])
+2015-05-09 20:10:19,426 - DEBUG: Executing : insert into staff (staff_id,password,name,id_card_num) values ('212328000' , 'helloWorld' , 'Xiaoming' , '150204xxxxxxx');
+2015-05-09 20:10:19,427 - DEBUG: _getId : dict_keys(['id_card_num']) ; dict_values(['150214xxxxxxx'])
+2015-05-09 20:10:19,427 - DEBUG: select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:10:19,427 - DEBUG: Executing : select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:10:19,427 - DEBUG: _getId : dict_keys(['id_card_num']) ; dict_values(['150204xxxxxxx'])
+2015-05-09 20:10:19,427 - DEBUG: select id from staff WHERE   id_card_num = '150204xxxxxxx';
+2015-05-09 20:10:19,427 - DEBUG: Executing : select id from staff WHERE   id_card_num = '150204xxxxxxx';
+2015-05-09 20:10:19,428 - DEBUG: _addContent : dict_keys(['staff_id', 'protege_id', 'rate']) ; dict_values([65, 70, 3])
+2015-05-09 20:10:19,428 - DEBUG: Executing : insert into comment (staff_id,protege_id,rate) values (65 , 70 , 3);
+2015-05-09 20:10:19,450 - DEBUG: _getId : dict_keys(['staff_id', 'protege_id']) ; dict_values([65, 70])
+2015-05-09 20:10:19,450 - DEBUG: select id from comment WHERE   staff_id = 65  and  protege_id = 70;
+2015-05-09 20:10:19,450 - DEBUG: Executing : select id from comment WHERE   staff_id = 65  and  protege_id = 70;
+2015-05-09 20:10:19,451 - DEBUG: Executing : delete from comment WHERE id = 23;
+2015-05-09 20:10:19,453 - DEBUG: Executing : delete from protege WHERE id = 70;
+2015-05-09 20:10:19,459 - DEBUG: Executing : delete from staff WHERE id = 65;
+2015-05-09 20:10:19,463 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:10:19,464 - DEBUG: _addContent : dict_keys(['type', 'cushion_mac']) ; dict_values(['r1v1', 'TEST001'])
+2015-05-09 20:10:19,466 - DEBUG: Executing : insert into cushion (type,cushion_mac) values ('r1v1' , 'TEST001');
+2015-05-09 20:10:19,467 - DEBUG: _getId : dict_keys(['cushion_mac']) ; dict_values(['TEST001'])
+2015-05-09 20:10:19,467 - DEBUG: select id from cushion WHERE   cushion_mac = 'TEST001';
+2015-05-09 20:10:19,467 - DEBUG: Executing : select id from cushion WHERE   cushion_mac = 'TEST001';
+2015-05-09 20:10:19,467 - DEBUG: Executing : update cushion set type = 'r1v2' WHERE id = 31;
+2015-05-09 20:10:19,470 - DEBUG: select type from cushion WHERE id = 31;
+2015-05-09 20:10:19,470 - DEBUG: Executing : select type from cushion WHERE id = 31;
+2015-05-09 20:10:19,470 - DEBUG: Executing : delete from cushion WHERE id = 31;
+2015-05-09 20:10:19,471 - DEBUG: _getId : dict_keys(['cushion_mac']) ; dict_values(['TEST001'])
+2015-05-09 20:10:19,471 - DEBUG: select id from cushion WHERE   cushion_mac = 'TEST001';
+2015-05-09 20:10:19,473 - DEBUG: Executing : select id from cushion WHERE   cushion_mac = 'TEST001';
+2015-05-09 20:10:19,473 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:10:19,474 - DEBUG: Executing : show tables;
+2015-05-09 20:10:19,476 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:10:19,477 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:10:19,480 - DEBUG: _addContent : dict_keys(['type', 'cushion_mac']) ; dict_values(['r1v1', 'TEST001C'])
+2015-05-09 20:10:19,480 - DEBUG: Executing : insert into cushion (type,cushion_mac) values ('r1v1' , 'TEST001C');
+2015-05-09 20:10:19,482 - DEBUG: _addContent : dict_keys(['type', 'routerco_mac']) ; dict_values(['r1v1', 'TEST001R'])
+2015-05-09 20:10:19,482 - DEBUG: Executing : insert into router (type,routerco_mac) values ('r1v1' , 'TEST001R');
+2015-05-09 20:10:19,483 - DEBUG: _addContent : dict_keys(['name', 'mobile', 'gender', 'contacts_name1', 'contacts_tel1', 'id_card_num']) ; dict_values(['XiaoHe', '13033331234', 'male', 'XiaoWang', '13033333214', '150214xxxxxxx'])
+2015-05-09 20:10:19,483 - DEBUG: Executing : insert into protege (name,mobile,gender,contacts_name1,contacts_tel1,id_card_num) values ('XiaoHe' , '13033331234' , 'male' , 'XiaoWang' , '13033333214' , '150214xxxxxxx');
+2015-05-09 20:10:19,484 - DEBUG: _getId : dict_keys(['cushion_mac']) ; dict_values(['TEST001C'])
+2015-05-09 20:10:19,484 - DEBUG: select id from cushion WHERE   cushion_mac = 'TEST001C';
+2015-05-09 20:10:19,484 - DEBUG: Executing : select id from cushion WHERE   cushion_mac = 'TEST001C';
+2015-05-09 20:10:19,486 - DEBUG: _getId : dict_keys(['routerco_mac']) ; dict_values(['TEST001R'])
+2015-05-09 20:10:19,486 - DEBUG: select id from router WHERE   routerco_mac = 'TEST001R';
+2015-05-09 20:10:19,486 - DEBUG: Executing : select id from router WHERE   routerco_mac = 'TEST001R';
+2015-05-09 20:10:19,486 - DEBUG: _getId : dict_keys(['id_card_num']) ; dict_values(['150214xxxxxxx'])
+2015-05-09 20:10:19,486 - DEBUG: select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:10:19,486 - DEBUG: Executing : select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:10:19,486 - DEBUG: _addContent : dict_keys(['router_id', 'cushion_id', 'protege_id']) ; dict_values([27, 32, 71])
+2015-05-09 20:10:19,486 - DEBUG: Executing : insert into location (router_id,cushion_id,protege_id) values (27 , 32 , 71);
+2015-05-09 20:10:19,489 - DEBUG: _getId : dict_keys(['router_id', 'cushion_id', 'protege_id']) ; dict_values([27, 32, 71])
+2015-05-09 20:10:19,490 - DEBUG: select id from location WHERE   router_id = 27  and  cushion_id = 32  and  protege_id = 71;
+2015-05-09 20:10:19,490 - DEBUG: Executing : select id from location WHERE   router_id = 27  and  cushion_id = 32  and  protege_id = 71;
+2015-05-09 20:10:19,490 - DEBUG: Executing : delete from router WHERE id = 27;
+2015-05-09 20:10:19,492 - DEBUG: Executing : delete from cushion WHERE id = 32;
+2015-05-09 20:10:19,497 - DEBUG: Executing : delete from protege WHERE id = 71;
+2015-05-09 20:10:19,500 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:10:19,503 - DEBUG: _addContent : dict_keys(['type', 'cushion_mac']) ; dict_values(['r1v1', 'TEST001C'])
+2015-05-09 20:10:19,503 - DEBUG: Executing : insert into cushion (type,cushion_mac) values ('r1v1' , 'TEST001C');
+2015-05-09 20:10:19,505 - DEBUG: _addContent : dict_keys(['type', 'routerco_mac']) ; dict_values(['r1v1', 'TEST001R'])
+2015-05-09 20:10:19,506 - DEBUG: Executing : insert into router (type,routerco_mac) values ('r1v1' , 'TEST001R');
+2015-05-09 20:10:19,507 - DEBUG: _addContent : dict_keys(['name', 'mobile', 'gender', 'contacts_name1', 'contacts_tel1', 'id_card_num']) ; dict_values(['XiaoHe', '13033331234', 'male', 'XiaoWang', '13033333214', '150214xxxxxxx'])
+2015-05-09 20:10:19,507 - DEBUG: Executing : insert into protege (name,mobile,gender,contacts_name1,contacts_tel1,id_card_num) values ('XiaoHe' , '13033331234' , 'male' , 'XiaoWang' , '13033333214' , '150214xxxxxxx');
+2015-05-09 20:10:19,510 - DEBUG: _getId : dict_keys(['cushion_mac']) ; dict_values(['TEST001C'])
+2015-05-09 20:10:19,512 - DEBUG: select id from cushion WHERE   cushion_mac = 'TEST001C';
+2015-05-09 20:10:19,512 - DEBUG: Executing : select id from cushion WHERE   cushion_mac = 'TEST001C';
+2015-05-09 20:10:19,512 - DEBUG: _getId : dict_keys(['routerco_mac']) ; dict_values(['TEST001R'])
+2015-05-09 20:10:19,512 - DEBUG: select id from router WHERE   routerco_mac = 'TEST001R';
+2015-05-09 20:10:19,513 - DEBUG: Executing : select id from router WHERE   routerco_mac = 'TEST001R';
+2015-05-09 20:10:19,513 - DEBUG: _getId : dict_keys(['id_card_num']) ; dict_values(['150214xxxxxxx'])
+2015-05-09 20:10:19,513 - DEBUG: select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:10:19,513 - DEBUG: Executing : select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:10:19,513 - DEBUG: _addContent : dict_keys(['router_id', 'cushion_id', 'protege_id']) ; dict_values([28, 33, 72])
+2015-05-09 20:10:19,513 - DEBUG: Executing : insert into location (router_id,cushion_id,protege_id) values (28 , 33 , 72);
+2015-05-09 20:10:19,516 - DEBUG: _getId : dict_keys(['router_id', 'cushion_id', 'protege_id']) ; dict_values([28, 33, 72])
+2015-05-09 20:10:19,516 - DEBUG: select id from location WHERE   router_id = 28  and  cushion_id = 33  and  protege_id = 72;
+2015-05-09 20:10:19,516 - DEBUG: Executing : select id from location WHERE   router_id = 28  and  cushion_id = 33  and  protege_id = 72;
+2015-05-09 20:10:19,516 - DEBUG: _addContent : dict_keys(['type']) ; dict_values(['r1v1'])
+2015-05-09 20:10:19,516 - DEBUG: Executing : insert into signal_type (type) values ('r1v1');
+2015-05-09 20:10:19,519 - DEBUG: _getId : dict_keys(['type']) ; dict_values(['r1v1'])
+2015-05-09 20:10:19,519 - DEBUG: select id from signal_type WHERE   type = 'r1v1';
+2015-05-09 20:10:19,519 - DEBUG: Executing : select id from signal_type WHERE   type = 'r1v1';
+2015-05-09 20:10:19,519 - DEBUG: _addContent : dict_keys(['location_id', 'signal_id']) ; dict_values([13, 22])
+2015-05-09 20:10:19,519 - DEBUG: Executing : insert into monitor_data (location_id,signal_id) values (13 , 22);
+2015-05-09 20:10:19,520 - DEBUG: _getId : dict_keys(['location_id', 'signal_id']) ; dict_values([13, 22])
+2015-05-09 20:10:19,520 - DEBUG: select id from monitor_data WHERE   location_id = 13  and  signal_id = 22;
+2015-05-09 20:10:19,520 - DEBUG: Executing : select id from monitor_data WHERE   location_id = 13  and  signal_id = 22;
+2015-05-09 20:10:19,522 - DEBUG: Executing : delete from router WHERE id = 28;
+2015-05-09 20:10:19,523 - DEBUG: Executing : delete from cushion WHERE id = 33;
+2015-05-09 20:10:19,528 - DEBUG: Executing : delete from protege WHERE id = 72;
+2015-05-09 20:10:19,529 - DEBUG: Executing : delete from signal_type WHERE id = 22;
+2015-05-09 20:10:19,530 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:10:19,532 - DEBUG: _addContent : dict_keys(['name', 'mobile', 'gender', 'contacts_name1', 'contacts_tel1', 'id_card_num']) ; dict_values(['XiaoHe', '13033331234', 'male', 'XiaoWang', '13033333214', '150214xxxxxxx'])
+2015-05-09 20:10:19,533 - DEBUG: Executing : insert into protege (name,mobile,gender,contacts_name1,contacts_tel1,id_card_num) values ('XiaoHe' , '13033331234' , 'male' , 'XiaoWang' , '13033333214' , '150214xxxxxxx');
+2015-05-09 20:10:19,536 - DEBUG: _getId : dict_keys(['name']) ; dict_values(['XiaoHe'])
+2015-05-09 20:10:19,536 - DEBUG: select id from protege WHERE   name = 'XiaoHe';
+2015-05-09 20:10:19,536 - DEBUG: Executing : select id from protege WHERE   name = 'XiaoHe';
+2015-05-09 20:10:19,536 - DEBUG: Executing : update protege set name = 'XiaoRan' WHERE id = 73;
+2015-05-09 20:10:19,539 - DEBUG: select name from protege WHERE id = 73;
+2015-05-09 20:10:19,539 - DEBUG: Executing : select name from protege WHERE id = 73;
+2015-05-09 20:10:19,539 - DEBUG: Executing : delete from protege WHERE id = 73;
+2015-05-09 20:10:19,540 - DEBUG: _getId : dict_keys(['name']) ; dict_values(['XiaoRan'])
+2015-05-09 20:10:19,540 - DEBUG: select id from protege WHERE   name = 'XiaoRan';
+2015-05-09 20:10:19,540 - DEBUG: Executing : select id from protege WHERE   name = 'XiaoRan';
+2015-05-09 20:10:19,542 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:10:19,543 - DEBUG: _addContent : dict_keys(['type', 'routerco_mac']) ; dict_values(['r1v1', 'TEST001'])
+2015-05-09 20:10:19,543 - DEBUG: Executing : insert into router (type,routerco_mac) values ('r1v1' , 'TEST001');
+2015-05-09 20:10:19,546 - DEBUG: _getId : dict_keys(['routerco_mac']) ; dict_values(['TEST001'])
+2015-05-09 20:10:19,546 - DEBUG: select id from router WHERE   routerco_mac = 'TEST001';
+2015-05-09 20:10:19,546 - DEBUG: Executing : select id from router WHERE   routerco_mac = 'TEST001';
+2015-05-09 20:10:19,546 - DEBUG: Executing : update router set type = 'r1v2' WHERE id = 29;
+2015-05-09 20:10:19,549 - DEBUG: select type from router WHERE id = 29;
+2015-05-09 20:10:19,549 - DEBUG: Executing : select type from router WHERE id = 29;
+2015-05-09 20:10:19,549 - DEBUG: Executing : delete from router WHERE id = 29;
+2015-05-09 20:10:19,552 - DEBUG: _getId : dict_keys(['routerco_mac']) ; dict_values(['TEST001'])
+2015-05-09 20:10:19,552 - DEBUG: select id from router WHERE   routerco_mac = 'TEST001';
+2015-05-09 20:10:19,552 - DEBUG: Executing : select id from router WHERE   routerco_mac = 'TEST001';
+2015-05-09 20:10:19,552 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:10:19,555 - DEBUG: _addContent : dict_keys(['attribute', 'value']) ; dict_values(['r1v1', 'TEST001'])
+2015-05-09 20:10:19,555 - DEBUG: Executing : insert into setting (attribute,value) values ('r1v1' , 'TEST001');
+2015-05-09 20:10:19,555 - DEBUG: _getId : dict_keys(['attribute']) ; dict_values(['r1v1'])
+2015-05-09 20:10:19,556 - DEBUG: select id from setting WHERE   attribute = 'r1v1';
+2015-05-09 20:10:19,556 - DEBUG: Executing : select id from setting WHERE   attribute = 'r1v1';
+2015-05-09 20:10:19,556 - DEBUG: Executing : update setting set attribute = 'r1v2' WHERE id = 16;
+2015-05-09 20:10:19,561 - DEBUG: select attribute from setting WHERE id = 16;
+2015-05-09 20:10:19,561 - DEBUG: Executing : select attribute from setting WHERE id = 16;
+2015-05-09 20:10:19,561 - DEBUG: Executing : delete from setting WHERE id = 16;
+2015-05-09 20:10:19,565 - DEBUG: _getId : dict_keys(['attribute']) ; dict_values(['TEST001'])
+2015-05-09 20:10:19,565 - DEBUG: select id from setting WHERE   attribute = 'TEST001';
+2015-05-09 20:10:19,565 - DEBUG: Executing : select id from setting WHERE   attribute = 'TEST001';
+2015-05-09 20:10:19,565 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:10:19,571 - DEBUG: _addContent : dict_keys(['type']) ; dict_values(['r1v1'])
+2015-05-09 20:10:19,572 - DEBUG: Executing : insert into signal_type (type) values ('r1v1');
+2015-05-09 20:10:19,576 - DEBUG: _getId : dict_keys(['type']) ; dict_values(['r1v1'])
+2015-05-09 20:10:19,576 - DEBUG: select id from signal_type WHERE   type = 'r1v1';
+2015-05-09 20:10:19,576 - DEBUG: Executing : select id from signal_type WHERE   type = 'r1v1';
+2015-05-09 20:10:19,578 - DEBUG: Executing : update signal_type set type = 'r1v2' WHERE id = 23;
+2015-05-09 20:10:19,581 - DEBUG: select type from signal_type WHERE id = 23;
+2015-05-09 20:10:19,581 - DEBUG: Executing : select type from signal_type WHERE id = 23;
+2015-05-09 20:10:19,582 - DEBUG: Executing : delete from signal_type WHERE id = 23;
+2015-05-09 20:10:19,584 - DEBUG: _getId : dict_keys(['type']) ; dict_values(['r1v2'])
+2015-05-09 20:10:19,585 - DEBUG: select id from signal_type WHERE   type = 'r1v2';
+2015-05-09 20:10:19,585 - DEBUG: Executing : select id from signal_type WHERE   type = 'r1v2';
+2015-05-09 20:10:19,585 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:10:19,586 - DEBUG: _addContent : dict_keys(['staff_id', 'password', 'name', 'id_card_num']) ; dict_values(['212328000', 'helloWorld', 'Xiaoming', '150204xxxxxxx'])
+2015-05-09 20:10:19,586 - DEBUG: Executing : insert into staff (staff_id,password,name,id_card_num) values ('212328000' , 'helloWorld' , 'Xiaoming' , '150204xxxxxxx');
+2015-05-09 20:10:19,589 - DEBUG: _getId : dict_keys(['staff_id']) ; dict_values(['212328000'])
+2015-05-09 20:10:19,589 - DEBUG: select id from staff WHERE   staff_id = '212328000';
+2015-05-09 20:10:19,589 - DEBUG: Executing : select id from staff WHERE   staff_id = '212328000';
+2015-05-09 20:10:19,591 - DEBUG: Executing : update staff set name = 'Xiaoming2' WHERE id = 66;
+2015-05-09 20:10:19,592 - DEBUG: select name from staff WHERE id = 66;
+2015-05-09 20:10:19,592 - DEBUG: Executing : select name from staff WHERE id = 66;
+2015-05-09 20:10:19,594 - DEBUG: Executing : delete from staff WHERE id = 66;
+2015-05-09 20:10:19,596 - DEBUG: _getId : dict_keys(['name']) ; dict_values(['Xiaoming2'])
+2015-05-09 20:10:19,596 - DEBUG: select id from staff WHERE   name = 'Xiaoming2';
+2015-05-09 20:10:19,596 - DEBUG: Executing : select id from staff WHERE   name = 'Xiaoming2';
+2015-05-09 20:10:19,598 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:10:19,598 - DEBUG: _addContent : dict_keys(['staff_id', 'password', 'name', 'id_card_num']) ; dict_values(['212328000', 'helloWorld', 'Xiaoming', '150204xxxxxxx'])
+2015-05-09 20:10:19,599 - DEBUG: Executing : insert into staff (staff_id,password,name,id_card_num) values ('212328000' , 'helloWorld' , 'Xiaoming' , '150204xxxxxxx');
+2015-05-09 20:10:19,601 - DEBUG: _getId : dict_keys(['id_card_num']) ; dict_values(['150204xxxxxxx'])
+2015-05-09 20:10:19,601 - DEBUG: select id from staff WHERE   id_card_num = '150204xxxxxxx';
+2015-05-09 20:10:19,601 - DEBUG: Executing : select id from staff WHERE   id_card_num = '150204xxxxxxx';
+2015-05-09 20:10:19,601 - DEBUG: _addContent : dict_keys(['staff_id']) ; dict_values([67])
+2015-05-09 20:10:19,601 - DEBUG: Executing : insert into staff_online (staff_id) values (67);
+2015-05-09 20:10:19,605 - DEBUG: _getId : dict_keys(['staff_id']) ; dict_values([67])
+2015-05-09 20:10:19,605 - DEBUG: select id from staff_online WHERE   staff_id = 67;
+2015-05-09 20:10:19,605 - DEBUG: Executing : select id from staff_online WHERE   staff_id = 67;
+2015-05-09 20:10:19,605 - DEBUG: Executing : delete from staff WHERE id = 67;
+2015-05-09 20:10:19,607 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:10:19,608 - DEBUG: _addContent : dict_keys(['solution']) ; dict_values(['r1v1'])
+2015-05-09 20:10:19,608 - DEBUG: Executing : insert into quick_solution (solution) values ('r1v1');
+2015-05-09 20:10:19,611 - DEBUG: _getId : dict_keys(['solution']) ; dict_values(['r1v1'])
+2015-05-09 20:10:19,611 - DEBUG: select id from quick_solution WHERE   solution = 'r1v1';
+2015-05-09 20:10:19,611 - DEBUG: Executing : select id from quick_solution WHERE   solution = 'r1v1';
+2015-05-09 20:10:19,611 - DEBUG: Executing : update quick_solution set solution = 'r1v2' WHERE id = 16;
+2015-05-09 20:10:19,615 - DEBUG: select solution from quick_solution WHERE id = 16;
+2015-05-09 20:10:19,615 - DEBUG: Executing : select solution from quick_solution WHERE id = 16;
+2015-05-09 20:10:19,615 - DEBUG: Executing : delete from quick_solution WHERE id = 16;
+2015-05-09 20:10:19,618 - DEBUG: _getId : dict_keys(['solution']) ; dict_values(['r1v2'])
+2015-05-09 20:10:19,618 - DEBUG: select id from quick_solution WHERE   solution = 'r1v2';
+2015-05-09 20:10:19,618 - DEBUG: Executing : select id from quick_solution WHERE   solution = 'r1v2';
+2015-05-09 20:19:17,068 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:19:17,084 - DEBUG: _addContent : dict_keys(['name', 'mobile', 'gender', 'contacts_name1', 'contacts_tel1', 'id_card_num']) ; dict_values(['XiaoHe', '13033331234', 'male', 'XiaoWang', '13033333214', '150214xxxxxxx'])
+2015-05-09 20:19:17,084 - DEBUG: Executing : insert into protege (name,mobile,gender,contacts_name1,contacts_tel1,id_card_num) values ('XiaoHe' , '13033331234' , 'male' , 'XiaoWang' , '13033333214' , '150214xxxxxxx');
+2015-05-09 20:19:17,165 - DEBUG: _addContent : dict_keys(['staff_id', 'password', 'name', 'id_card_num']) ; dict_values(['212328000', 'helloWorld', 'Xiaoming', '150204xxxxxxx'])
+2015-05-09 20:19:17,165 - DEBUG: Executing : insert into staff (staff_id,password,name,id_card_num) values ('212328000' , 'helloWorld' , 'Xiaoming' , '150204xxxxxxx');
+2015-05-09 20:19:17,170 - DEBUG: _getId : dict_keys(['id_card_num']) ; dict_values(['150214xxxxxxx'])
+2015-05-09 20:19:17,170 - DEBUG: select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:19:17,171 - DEBUG: Executing : select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:19:17,171 - DEBUG: _getId : dict_keys(['id_card_num']) ; dict_values(['150204xxxxxxx'])
+2015-05-09 20:19:17,173 - DEBUG: select id from staff WHERE   id_card_num = '150204xxxxxxx';
+2015-05-09 20:19:17,173 - DEBUG: Executing : select id from staff WHERE   id_card_num = '150204xxxxxxx';
+2015-05-09 20:19:17,174 - DEBUG: _addContent : dict_keys(['staff_id', 'protege_id', 'rate']) ; dict_values([68, 74, 3])
+2015-05-09 20:19:17,174 - DEBUG: Executing : insert into comment (staff_id,protege_id,rate) values (68 , 74 , 3);
+2015-05-09 20:19:17,177 - DEBUG: _getId : dict_keys(['staff_id', 'protege_id']) ; dict_values([68, 74])
+2015-05-09 20:19:17,178 - DEBUG: select id from comment WHERE   staff_id = 68  and  protege_id = 74;
+2015-05-09 20:19:17,178 - DEBUG: Executing : select id from comment WHERE   staff_id = 68  and  protege_id = 74;
+2015-05-09 20:19:17,180 - DEBUG: Executing : delete from comment WHERE id = 24;
+2015-05-09 20:19:17,187 - DEBUG: Executing : delete from protege WHERE id = 74;
+2015-05-09 20:19:17,194 - DEBUG: Executing : delete from staff WHERE id = 68;
+2015-05-09 20:19:17,197 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:19:17,203 - DEBUG: _addContent : dict_keys(['type', 'cushion_mac']) ; dict_values(['r1v1', 'TEST001'])
+2015-05-09 20:19:17,203 - DEBUG: Executing : insert into cushion (type,cushion_mac) values ('r1v1' , 'TEST001');
+2015-05-09 20:19:17,206 - DEBUG: _getId : dict_keys(['cushion_mac']) ; dict_values(['TEST001'])
+2015-05-09 20:19:17,207 - DEBUG: select id from cushion WHERE   cushion_mac = 'TEST001';
+2015-05-09 20:19:17,207 - DEBUG: Executing : select id from cushion WHERE   cushion_mac = 'TEST001';
+2015-05-09 20:19:17,209 - DEBUG: Executing : update cushion set type = 'r1v2' WHERE id = 34;
+2015-05-09 20:19:17,210 - DEBUG: select type from cushion WHERE id = 34;
+2015-05-09 20:19:17,211 - DEBUG: Executing : select type from cushion WHERE id = 34;
+2015-05-09 20:19:17,213 - DEBUG: Executing : delete from cushion WHERE id = 34;
+2015-05-09 20:19:17,219 - DEBUG: _getId : dict_keys(['cushion_mac']) ; dict_values(['TEST001'])
+2015-05-09 20:19:17,219 - DEBUG: select id from cushion WHERE   cushion_mac = 'TEST001';
+2015-05-09 20:19:17,220 - DEBUG: Executing : select id from cushion WHERE   cushion_mac = 'TEST001';
+2015-05-09 20:19:17,221 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:19:17,224 - DEBUG: Executing : show tables;
+2015-05-09 20:19:17,226 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:19:17,226 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:19:17,229 - DEBUG: _addContent : dict_keys(['type', 'cushion_mac']) ; dict_values(['r1v1', 'TEST001C'])
+2015-05-09 20:19:17,229 - DEBUG: Executing : insert into cushion (type,cushion_mac) values ('r1v1' , 'TEST001C');
+2015-05-09 20:19:17,230 - DEBUG: _addContent : dict_keys(['type', 'routerco_mac']) ; dict_values(['r1v1', 'TEST001R'])
+2015-05-09 20:19:17,230 - DEBUG: Executing : insert into router (type,routerco_mac) values ('r1v1' , 'TEST001R');
+2015-05-09 20:19:17,233 - DEBUG: _addContent : dict_keys(['name', 'mobile', 'gender', 'contacts_name1', 'contacts_tel1', 'id_card_num']) ; dict_values(['XiaoHe', '13033331234', 'male', 'XiaoWang', '13033333214', '150214xxxxxxx'])
+2015-05-09 20:19:17,233 - DEBUG: Executing : insert into protege (name,mobile,gender,contacts_name1,contacts_tel1,id_card_num) values ('XiaoHe' , '13033331234' , 'male' , 'XiaoWang' , '13033333214' , '150214xxxxxxx');
+2015-05-09 20:19:17,234 - DEBUG: _getId : dict_keys(['cushion_mac']) ; dict_values(['TEST001C'])
+2015-05-09 20:19:17,234 - DEBUG: select id from cushion WHERE   cushion_mac = 'TEST001C';
+2015-05-09 20:19:17,234 - DEBUG: Executing : select id from cushion WHERE   cushion_mac = 'TEST001C';
+2015-05-09 20:19:17,236 - DEBUG: _getId : dict_keys(['routerco_mac']) ; dict_values(['TEST001R'])
+2015-05-09 20:19:17,236 - DEBUG: select id from router WHERE   routerco_mac = 'TEST001R';
+2015-05-09 20:19:17,236 - DEBUG: Executing : select id from router WHERE   routerco_mac = 'TEST001R';
+2015-05-09 20:19:17,236 - DEBUG: _getId : dict_keys(['id_card_num']) ; dict_values(['150214xxxxxxx'])
+2015-05-09 20:19:17,236 - DEBUG: select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:19:17,236 - DEBUG: Executing : select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:19:17,236 - DEBUG: _addContent : dict_keys(['router_id', 'cushion_id', 'protege_id']) ; dict_values([30, 35, 75])
+2015-05-09 20:19:17,236 - DEBUG: Executing : insert into location (router_id,cushion_id,protege_id) values (30 , 35 , 75);
+2015-05-09 20:19:17,265 - DEBUG: _getId : dict_keys(['router_id', 'cushion_id', 'protege_id']) ; dict_values([30, 35, 75])
+2015-05-09 20:19:17,265 - DEBUG: select id from location WHERE   router_id = 30  and  cushion_id = 35  and  protege_id = 75;
+2015-05-09 20:19:17,265 - DEBUG: Executing : select id from location WHERE   router_id = 30  and  cushion_id = 35  and  protege_id = 75;
+2015-05-09 20:19:17,266 - DEBUG: Executing : delete from router WHERE id = 30;
+2015-05-09 20:19:17,269 - DEBUG: Executing : delete from cushion WHERE id = 35;
+2015-05-09 20:19:17,273 - DEBUG: Executing : delete from protege WHERE id = 75;
+2015-05-09 20:19:17,276 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:19:17,279 - DEBUG: _addContent : dict_keys(['type', 'cushion_mac']) ; dict_values(['r1v1', 'TEST001C'])
+2015-05-09 20:19:17,279 - DEBUG: Executing : insert into cushion (type,cushion_mac) values ('r1v1' , 'TEST001C');
+2015-05-09 20:19:17,282 - DEBUG: _addContent : dict_keys(['type', 'routerco_mac']) ; dict_values(['r1v1', 'TEST001R'])
+2015-05-09 20:19:17,282 - DEBUG: Executing : insert into router (type,routerco_mac) values ('r1v1' , 'TEST001R');
+2015-05-09 20:19:17,283 - DEBUG: _addContent : dict_keys(['name', 'mobile', 'gender', 'contacts_name1', 'contacts_tel1', 'id_card_num']) ; dict_values(['XiaoHe', '13033331234', 'male', 'XiaoWang', '13033333214', '150214xxxxxxx'])
+2015-05-09 20:19:17,283 - DEBUG: Executing : insert into protege (name,mobile,gender,contacts_name1,contacts_tel1,id_card_num) values ('XiaoHe' , '13033331234' , 'male' , 'XiaoWang' , '13033333214' , '150214xxxxxxx');
+2015-05-09 20:19:17,286 - DEBUG: _getId : dict_keys(['cushion_mac']) ; dict_values(['TEST001C'])
+2015-05-09 20:19:17,286 - DEBUG: select id from cushion WHERE   cushion_mac = 'TEST001C';
+2015-05-09 20:19:17,286 - DEBUG: Executing : select id from cushion WHERE   cushion_mac = 'TEST001C';
+2015-05-09 20:19:17,288 - DEBUG: _getId : dict_keys(['routerco_mac']) ; dict_values(['TEST001R'])
+2015-05-09 20:19:17,288 - DEBUG: select id from router WHERE   routerco_mac = 'TEST001R';
+2015-05-09 20:19:17,288 - DEBUG: Executing : select id from router WHERE   routerco_mac = 'TEST001R';
+2015-05-09 20:19:17,288 - DEBUG: _getId : dict_keys(['id_card_num']) ; dict_values(['150214xxxxxxx'])
+2015-05-09 20:19:17,289 - DEBUG: select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:19:17,289 - DEBUG: Executing : select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:19:17,289 - DEBUG: _addContent : dict_keys(['router_id', 'cushion_id', 'protege_id']) ; dict_values([31, 36, 76])
+2015-05-09 20:19:17,289 - DEBUG: Executing : insert into location (router_id,cushion_id,protege_id) values (31 , 36 , 76);
+2015-05-09 20:19:17,292 - DEBUG: _getId : dict_keys(['router_id', 'cushion_id', 'protege_id']) ; dict_values([31, 36, 76])
+2015-05-09 20:19:17,292 - DEBUG: select id from location WHERE   router_id = 31  and  cushion_id = 36  and  protege_id = 76;
+2015-05-09 20:19:17,292 - DEBUG: Executing : select id from location WHERE   router_id = 31  and  cushion_id = 36  and  protege_id = 76;
+2015-05-09 20:19:17,292 - DEBUG: _addContent : dict_keys(['type']) ; dict_values(['r1v1'])
+2015-05-09 20:19:17,292 - DEBUG: Executing : insert into signal_type (type) values ('r1v1');
+2015-05-09 20:19:17,293 - DEBUG: _getId : dict_keys(['type']) ; dict_values(['r1v1'])
+2015-05-09 20:19:17,293 - DEBUG: select id from signal_type WHERE   type = 'r1v1';
+2015-05-09 20:19:17,293 - DEBUG: Executing : select id from signal_type WHERE   type = 'r1v1';
+2015-05-09 20:19:17,295 - DEBUG: _addContent : dict_keys(['location_id', 'signal_id']) ; dict_values([15, 24])
+2015-05-09 20:19:17,295 - DEBUG: Executing : insert into monitor_data (location_id,signal_id) values (15 , 24);
+2015-05-09 20:19:17,296 - DEBUG: _getId : dict_keys(['location_id', 'signal_id']) ; dict_values([15, 24])
+2015-05-09 20:19:17,298 - DEBUG: select id from monitor_data WHERE   location_id = 15  and  signal_id = 24;
+2015-05-09 20:19:17,298 - DEBUG: Executing : select id from monitor_data WHERE   location_id = 15  and  signal_id = 24;
+2015-05-09 20:19:17,298 - DEBUG: Executing : delete from router WHERE id = 31;
+2015-05-09 20:19:17,299 - DEBUG: Executing : delete from cushion WHERE id = 36;
+2015-05-09 20:19:17,302 - DEBUG: Executing : delete from protege WHERE id = 76;
+2015-05-09 20:19:17,305 - DEBUG: Executing : delete from signal_type WHERE id = 24;
+2015-05-09 20:19:17,308 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:19:17,309 - DEBUG: _addContent : dict_keys(['name', 'mobile', 'gender', 'contacts_name1', 'contacts_tel1', 'id_card_num']) ; dict_values(['XiaoHe', '13033331234', 'male', 'XiaoWang', '13033333214', '150214xxxxxxx'])
+2015-05-09 20:19:17,309 - DEBUG: Executing : insert into protege (name,mobile,gender,contacts_name1,contacts_tel1,id_card_num) values ('XiaoHe' , '13033331234' , 'male' , 'XiaoWang' , '13033333214' , '150214xxxxxxx');
+2015-05-09 20:19:17,311 - DEBUG: _getId : dict_keys(['name']) ; dict_values(['XiaoHe'])
+2015-05-09 20:19:17,311 - DEBUG: select id from protege WHERE   name = 'XiaoHe';
+2015-05-09 20:19:17,311 - DEBUG: Executing : select id from protege WHERE   name = 'XiaoHe';
+2015-05-09 20:19:17,312 - DEBUG: Executing : update protege set name = 'XiaoRan' WHERE id = 77;
+2015-05-09 20:19:17,312 - DEBUG: select name from protege WHERE id = 77;
+2015-05-09 20:19:17,312 - DEBUG: Executing : select name from protege WHERE id = 77;
+2015-05-09 20:19:17,313 - DEBUG: Executing : delete from protege WHERE id = 77;
+2015-05-09 20:19:17,315 - DEBUG: _getId : dict_keys(['name']) ; dict_values(['XiaoRan'])
+2015-05-09 20:19:17,315 - DEBUG: select id from protege WHERE   name = 'XiaoRan';
+2015-05-09 20:19:17,315 - DEBUG: Executing : select id from protege WHERE   name = 'XiaoRan';
+2015-05-09 20:19:17,315 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:19:17,319 - DEBUG: _addContent : dict_keys(['type', 'routerco_mac']) ; dict_values(['r1v1', 'TEST001'])
+2015-05-09 20:19:17,319 - DEBUG: Executing : insert into router (type,routerco_mac) values ('r1v1' , 'TEST001');
+2015-05-09 20:19:17,321 - DEBUG: _getId : dict_keys(['routerco_mac']) ; dict_values(['TEST001'])
+2015-05-09 20:19:17,321 - DEBUG: select id from router WHERE   routerco_mac = 'TEST001';
+2015-05-09 20:19:17,321 - DEBUG: Executing : select id from router WHERE   routerco_mac = 'TEST001';
+2015-05-09 20:19:17,322 - DEBUG: Executing : update router set type = 'r1v2' WHERE id = 32;
+2015-05-09 20:19:17,323 - DEBUG: select type from router WHERE id = 32;
+2015-05-09 20:19:17,323 - DEBUG: Executing : select type from router WHERE id = 32;
+2015-05-09 20:19:17,325 - DEBUG: Executing : delete from router WHERE id = 32;
+2015-05-09 20:19:17,326 - DEBUG: _getId : dict_keys(['routerco_mac']) ; dict_values(['TEST001'])
+2015-05-09 20:19:17,326 - DEBUG: select id from router WHERE   routerco_mac = 'TEST001';
+2015-05-09 20:19:17,326 - DEBUG: Executing : select id from router WHERE   routerco_mac = 'TEST001';
+2015-05-09 20:19:17,326 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:19:17,328 - DEBUG: _addContent : dict_keys(['attribute', 'value']) ; dict_values(['r1v1', 'TEST001'])
+2015-05-09 20:19:17,328 - DEBUG: Executing : insert into setting (attribute,value) values ('r1v1' , 'TEST001');
+2015-05-09 20:19:17,332 - DEBUG: _getId : dict_keys(['attribute']) ; dict_values(['r1v1'])
+2015-05-09 20:19:17,332 - DEBUG: select id from setting WHERE   attribute = 'r1v1';
+2015-05-09 20:19:17,332 - DEBUG: Executing : select id from setting WHERE   attribute = 'r1v1';
+2015-05-09 20:19:17,332 - DEBUG: Executing : update setting set attribute = 'r1v2' WHERE id = 17;
+2015-05-09 20:19:17,335 - DEBUG: select attribute from setting WHERE id = 17;
+2015-05-09 20:19:17,335 - DEBUG: Executing : select attribute from setting WHERE id = 17;
+2015-05-09 20:19:17,335 - DEBUG: Executing : delete from setting WHERE id = 17;
+2015-05-09 20:19:17,336 - DEBUG: _getId : dict_keys(['attribute']) ; dict_values(['TEST001'])
+2015-05-09 20:19:17,338 - DEBUG: select id from setting WHERE   attribute = 'TEST001';
+2015-05-09 20:19:17,338 - DEBUG: Executing : select id from setting WHERE   attribute = 'TEST001';
+2015-05-09 20:19:17,338 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:19:17,341 - DEBUG: _addContent : dict_keys(['type']) ; dict_values(['r1v1'])
+2015-05-09 20:19:17,341 - DEBUG: Executing : insert into signal_type (type) values ('r1v1');
+2015-05-09 20:19:17,342 - DEBUG: _getId : dict_keys(['type']) ; dict_values(['r1v1'])
+2015-05-09 20:19:17,342 - DEBUG: select id from signal_type WHERE   type = 'r1v1';
+2015-05-09 20:19:17,342 - DEBUG: Executing : select id from signal_type WHERE   type = 'r1v1';
+2015-05-09 20:19:17,342 - DEBUG: Executing : update signal_type set type = 'r1v2' WHERE id = 25;
+2015-05-09 20:19:17,345 - DEBUG: select type from signal_type WHERE id = 25;
+2015-05-09 20:19:17,345 - DEBUG: Executing : select type from signal_type WHERE id = 25;
+2015-05-09 20:19:17,346 - DEBUG: Executing : delete from signal_type WHERE id = 25;
+2015-05-09 20:19:17,348 - DEBUG: _getId : dict_keys(['type']) ; dict_values(['r1v2'])
+2015-05-09 20:19:17,348 - DEBUG: select id from signal_type WHERE   type = 'r1v2';
+2015-05-09 20:19:17,348 - DEBUG: Executing : select id from signal_type WHERE   type = 'r1v2';
+2015-05-09 20:19:17,349 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:19:17,351 - DEBUG: _addContent : dict_keys(['staff_id', 'password', 'name', 'id_card_num']) ; dict_values(['212328000', 'helloWorld', 'Xiaoming', '150204xxxxxxx'])
+2015-05-09 20:19:17,351 - DEBUG: Executing : insert into staff (staff_id,password,name,id_card_num) values ('212328000' , 'helloWorld' , 'Xiaoming' , '150204xxxxxxx');
+2015-05-09 20:19:17,354 - DEBUG: _getId : dict_keys(['staff_id']) ; dict_values(['212328000'])
+2015-05-09 20:19:17,354 - DEBUG: select id from staff WHERE   staff_id = '212328000';
+2015-05-09 20:19:17,354 - DEBUG: Executing : select id from staff WHERE   staff_id = '212328000';
+2015-05-09 20:19:17,355 - DEBUG: Executing : update staff set name = 'Xiaoming2' WHERE id = 69;
+2015-05-09 20:19:17,357 - DEBUG: select name from staff WHERE id = 69;
+2015-05-09 20:19:17,357 - DEBUG: Executing : select name from staff WHERE id = 69;
+2015-05-09 20:19:17,358 - DEBUG: Executing : delete from staff WHERE id = 69;
+2015-05-09 20:19:17,358 - DEBUG: _getId : dict_keys(['name']) ; dict_values(['Xiaoming2'])
+2015-05-09 20:19:17,358 - DEBUG: select id from staff WHERE   name = 'Xiaoming2';
+2015-05-09 20:19:17,358 - DEBUG: Executing : select id from staff WHERE   name = 'Xiaoming2';
+2015-05-09 20:19:17,359 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:19:17,361 - DEBUG: _addContent : dict_keys(['staff_id', 'password', 'name', 'id_card_num']) ; dict_values(['212328000', 'helloWorld', 'Xiaoming', '150204xxxxxxx'])
+2015-05-09 20:19:17,361 - DEBUG: Executing : insert into staff (staff_id,password,name,id_card_num) values ('212328000' , 'helloWorld' , 'Xiaoming' , '150204xxxxxxx');
+2015-05-09 20:19:17,362 - DEBUG: _getId : dict_keys(['id_card_num']) ; dict_values(['150204xxxxxxx'])
+2015-05-09 20:19:17,362 - DEBUG: select id from staff WHERE   id_card_num = '150204xxxxxxx';
+2015-05-09 20:19:17,362 - DEBUG: Executing : select id from staff WHERE   id_card_num = '150204xxxxxxx';
+2015-05-09 20:19:17,364 - DEBUG: _addContent : dict_keys(['staff_id']) ; dict_values([70])
+2015-05-09 20:19:17,364 - DEBUG: Executing : insert into staff_online (staff_id) values (70);
+2015-05-09 20:19:17,368 - DEBUG: _getId : dict_keys(['staff_id']) ; dict_values([70])
+2015-05-09 20:19:17,368 - DEBUG: select id from staff_online WHERE   staff_id = 70;
+2015-05-09 20:19:17,368 - DEBUG: Executing : select id from staff_online WHERE   staff_id = 70;
+2015-05-09 20:19:17,368 - DEBUG: Executing : delete from staff WHERE id = 70;
+2015-05-09 20:19:17,371 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:19:17,372 - DEBUG: _addContent : dict_keys(['type', 'cushion_mac']) ; dict_values(['r1v1', 'TEST001C'])
+2015-05-09 20:19:17,372 - DEBUG: Executing : insert into cushion (type,cushion_mac) values ('r1v1' , 'TEST001C');
+2015-05-09 20:19:17,375 - DEBUG: _addContent : dict_keys(['type', 'routerco_mac']) ; dict_values(['r1v1', 'TEST001R'])
+2015-05-09 20:19:17,375 - DEBUG: Executing : insert into router (type,routerco_mac) values ('r1v1' , 'TEST001R');
+2015-05-09 20:19:17,375 - DEBUG: _addContent : dict_keys(['name', 'mobile', 'gender', 'contacts_name1', 'contacts_tel1', 'id_card_num']) ; dict_values(['XiaoHe', '13033331234', 'male', 'XiaoWang', '13033333214', '150214xxxxxxx'])
+2015-05-09 20:19:17,377 - DEBUG: Executing : insert into protege (name,mobile,gender,contacts_name1,contacts_tel1,id_card_num) values ('XiaoHe' , '13033331234' , 'male' , 'XiaoWang' , '13033333214' , '150214xxxxxxx');
+2015-05-09 20:19:17,378 - DEBUG: _getId : dict_keys(['cushion_mac']) ; dict_values(['TEST001C'])
+2015-05-09 20:19:17,378 - DEBUG: select id from cushion WHERE   cushion_mac = 'TEST001C';
+2015-05-09 20:19:17,378 - DEBUG: Executing : select id from cushion WHERE   cushion_mac = 'TEST001C';
+2015-05-09 20:19:17,378 - DEBUG: _getId : dict_keys(['routerco_mac']) ; dict_values(['TEST001R'])
+2015-05-09 20:19:17,378 - DEBUG: select id from router WHERE   routerco_mac = 'TEST001R';
+2015-05-09 20:19:17,378 - DEBUG: Executing : select id from router WHERE   routerco_mac = 'TEST001R';
+2015-05-09 20:19:17,378 - DEBUG: _getId : dict_keys(['id_card_num']) ; dict_values(['150214xxxxxxx'])
+2015-05-09 20:19:17,380 - DEBUG: select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:19:17,380 - DEBUG: Executing : select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:19:17,380 - DEBUG: _addContent : dict_keys(['router_id', 'cushion_id', 'protege_id']) ; dict_values([33, 37, 78])
+2015-05-09 20:19:17,380 - DEBUG: Executing : insert into location (router_id,cushion_id,protege_id) values (33 , 37 , 78);
+2015-05-09 20:19:17,381 - DEBUG: _getId : dict_keys(['router_id', 'cushion_id', 'protege_id']) ; dict_values([33, 37, 78])
+2015-05-09 20:19:17,381 - DEBUG: select id from location WHERE   router_id = 33  and  cushion_id = 37  and  protege_id = 78;
+2015-05-09 20:19:17,381 - DEBUG: Executing : select id from location WHERE   router_id = 33  and  cushion_id = 37  and  protege_id = 78;
+2015-05-09 20:19:17,382 - DEBUG: _addContent : dict_keys(['type']) ; dict_values(['r1v1'])
+2015-05-09 20:19:17,382 - DEBUG: Executing : insert into signal_type (type) values ('r1v1');
+2015-05-09 20:19:17,384 - DEBUG: _getId : dict_keys(['type']) ; dict_values(['r1v1'])
+2015-05-09 20:19:17,384 - DEBUG: select id from signal_type WHERE   type = 'r1v1';
+2015-05-09 20:19:17,384 - DEBUG: Executing : select id from signal_type WHERE   type = 'r1v1';
+2015-05-09 20:19:17,385 - DEBUG: _addContent : dict_keys(['location_id', 'signal_id']) ; dict_values([16, 26])
+2015-05-09 20:19:17,387 - DEBUG: Executing : insert into monitor_data (location_id,signal_id) values (16 , 26);
+2015-05-09 20:19:17,390 - DEBUG: _getId : dict_keys(['location_id', 'signal_id']) ; dict_values([16, 26])
+2015-05-09 20:19:17,390 - DEBUG: select id from monitor_data WHERE   location_id = 16  and  signal_id = 26;
+2015-05-09 20:19:17,390 - DEBUG: Executing : select id from monitor_data WHERE   location_id = 16  and  signal_id = 26;
+2015-05-09 20:19:17,390 - DEBUG: _addContent : dict_keys(['type']) ; dict_values(['r1v1'])
+2015-05-09 20:19:17,390 - DEBUG: Executing : insert into warning_type (type) values ('r1v1');
+2015-05-09 20:19:17,417 - DEBUG: _getId : dict_keys(['type']) ; dict_values(['r1v1'])
+2015-05-09 20:19:17,417 - DEBUG: select id from warning_type WHERE   type = 'r1v1';
+2015-05-09 20:19:17,417 - DEBUG: Executing : select id from warning_type WHERE   type = 'r1v1';
+2015-05-09 20:19:17,417 - DEBUG: _addContent : dict_keys(['staff_id', 'password', 'name', 'id_card_num']) ; dict_values(['212328000', 'helloWorld', 'Xiaoming', '150204xxxxxxx'])
+2015-05-09 20:19:17,418 - DEBUG: Executing : insert into staff (staff_id,password,name,id_card_num) values ('212328000' , 'helloWorld' , 'Xiaoming' , '150204xxxxxxx');
+2015-05-09 20:19:17,423 - DEBUG: _getId : dict_keys(['staff_id']) ; dict_values(['212328000'])
+2015-05-09 20:19:17,423 - DEBUG: select id from staff WHERE   staff_id = '212328000';
+2015-05-09 20:19:17,423 - DEBUG: Executing : select id from staff WHERE   staff_id = '212328000';
+2015-05-09 20:19:17,424 - DEBUG: _addContent : dict_keys(['process_staff_id', 'warning_id', 'data_id']) ; dict_values([71, 1, 4])
+2015-05-09 20:19:17,424 - DEBUG: Executing : insert into warning (process_staff_id,warning_id,data_id) values (71 , 1 , 4);
+2015-05-09 20:19:17,438 - DEBUG: _getId : dict_keys(['process_staff_id', 'warning_id', 'data_id']) ; dict_values([71, 1, 4])
+2015-05-09 20:19:17,438 - DEBUG: select id from staff WHERE   process_staff_id = 71  and  warning_id = 1  and  data_id = 4;
+2015-05-09 20:19:17,438 - DEBUG: Executing : select id from staff WHERE   process_staff_id = 71  and  warning_id = 1  and  data_id = 4;
+2015-05-09 20:19:17,440 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:19:17,456 - DEBUG: _addContent : dict_keys(['solution']) ; dict_values(['r1v1'])
+2015-05-09 20:19:17,457 - DEBUG: Executing : insert into quick_solution (solution) values ('r1v1');
+2015-05-09 20:19:17,459 - DEBUG: _getId : dict_keys(['solution']) ; dict_values(['r1v1'])
+2015-05-09 20:19:17,459 - DEBUG: select id from quick_solution WHERE   solution = 'r1v1';
+2015-05-09 20:19:17,459 - DEBUG: Executing : select id from quick_solution WHERE   solution = 'r1v1';
+2015-05-09 20:19:17,460 - DEBUG: Executing : update quick_solution set solution = 'r1v2' WHERE id = 17;
+2015-05-09 20:19:17,461 - DEBUG: select solution from quick_solution WHERE id = 17;
+2015-05-09 20:19:17,461 - DEBUG: Executing : select solution from quick_solution WHERE id = 17;
+2015-05-09 20:19:17,463 - DEBUG: Executing : delete from quick_solution WHERE id = 17;
+2015-05-09 20:19:17,463 - DEBUG: _getId : dict_keys(['solution']) ; dict_values(['r1v2'])
+2015-05-09 20:19:17,463 - DEBUG: select id from quick_solution WHERE   solution = 'r1v2';
+2015-05-09 20:19:17,464 - DEBUG: Executing : select id from quick_solution WHERE   solution = 'r1v2';
+2015-05-09 20:23:06,798 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:23:06,815 - DEBUG: _addContent : dict_keys(['name', 'mobile', 'gender', 'contacts_name1', 'contacts_tel1', 'id_card_num']) ; dict_values(['XiaoHe', '13033331234', 'male', 'XiaoWang', '13033333214', '150214xxxxxxx'])
+2015-05-09 20:23:06,815 - DEBUG: Executing : insert into protege (name,mobile,gender,contacts_name1,contacts_tel1,id_card_num) values ('XiaoHe' , '13033331234' , 'male' , 'XiaoWang' , '13033333214' , '150214xxxxxxx');
+2015-05-09 20:23:06,818 - DEBUG: _addContent : dict_keys(['staff_id', 'password', 'name', 'id_card_num']) ; dict_values(['212328000', 'helloWorld', 'Xiaoming', '150204xxxxxxx'])
+2015-05-09 20:23:06,818 - DEBUG: Executing : insert into staff (staff_id,password,name,id_card_num) values ('212328000' , 'helloWorld' , 'Xiaoming' , '150204xxxxxxx');
+2015-05-09 20:23:06,819 - DEBUG: _getId : dict_keys(['id_card_num']) ; dict_values(['150214xxxxxxx'])
+2015-05-09 20:23:06,819 - DEBUG: select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:23:06,819 - DEBUG: Executing : select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:23:06,821 - DEBUG: _getId : dict_keys(['id_card_num']) ; dict_values(['150204xxxxxxx'])
+2015-05-09 20:23:06,821 - DEBUG: select id from staff WHERE   id_card_num = '150204xxxxxxx';
+2015-05-09 20:23:06,821 - DEBUG: Executing : select id from staff WHERE   id_card_num = '150204xxxxxxx';
+2015-05-09 20:23:06,821 - DEBUG: _addContent : dict_keys(['staff_id', 'protege_id', 'rate']) ; dict_values([72, 79, 3])
+2015-05-09 20:23:06,821 - DEBUG: Executing : insert into comment (staff_id,protege_id,rate) values (72 , 79 , 3);
+2015-05-09 20:23:06,822 - DEBUG: _getId : dict_keys(['staff_id', 'protege_id']) ; dict_values([72, 79])
+2015-05-09 20:23:06,822 - DEBUG: select id from comment WHERE   staff_id = 72  and  protege_id = 79;
+2015-05-09 20:23:06,822 - DEBUG: Executing : select id from comment WHERE   staff_id = 72  and  protege_id = 79;
+2015-05-09 20:23:06,822 - DEBUG: Executing : delete from comment WHERE id = 25;
+2015-05-09 20:23:06,825 - DEBUG: Executing : delete from protege WHERE id = 79;
+2015-05-09 20:23:06,829 - DEBUG: Executing : delete from staff WHERE id = 72;
+2015-05-09 20:23:06,832 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:23:06,832 - DEBUG: _addContent : dict_keys(['type', 'cushion_mac']) ; dict_values(['r1v1', 'TEST001'])
+2015-05-09 20:23:06,834 - DEBUG: Executing : insert into cushion (type,cushion_mac) values ('r1v1' , 'TEST001');
+2015-05-09 20:23:06,836 - DEBUG: _getId : dict_keys(['cushion_mac']) ; dict_values(['TEST001'])
+2015-05-09 20:23:06,836 - DEBUG: select id from cushion WHERE   cushion_mac = 'TEST001';
+2015-05-09 20:23:06,836 - DEBUG: Executing : select id from cushion WHERE   cushion_mac = 'TEST001';
+2015-05-09 20:23:06,838 - DEBUG: Executing : update cushion set type = 'r1v2' WHERE id = 38;
+2015-05-09 20:23:06,838 - DEBUG: select type from cushion WHERE id = 38;
+2015-05-09 20:23:06,838 - DEBUG: Executing : select type from cushion WHERE id = 38;
+2015-05-09 20:23:06,839 - DEBUG: Executing : delete from cushion WHERE id = 38;
+2015-05-09 20:23:06,842 - DEBUG: _getId : dict_keys(['cushion_mac']) ; dict_values(['TEST001'])
+2015-05-09 20:23:06,842 - DEBUG: select id from cushion WHERE   cushion_mac = 'TEST001';
+2015-05-09 20:23:06,842 - DEBUG: Executing : select id from cushion WHERE   cushion_mac = 'TEST001';
+2015-05-09 20:23:06,842 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:23:06,845 - DEBUG: Executing : show tables;
+2015-05-09 20:23:06,845 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:23:06,846 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:23:06,848 - DEBUG: _addContent : dict_keys(['type', 'cushion_mac']) ; dict_values(['r1v1', 'TEST001C'])
+2015-05-09 20:23:06,848 - DEBUG: Executing : insert into cushion (type,cushion_mac) values ('r1v1' , 'TEST001C');
+2015-05-09 20:23:06,851 - DEBUG: _addContent : dict_keys(['type', 'routerco_mac']) ; dict_values(['r1v1', 'TEST001R'])
+2015-05-09 20:23:06,851 - DEBUG: Executing : insert into router (type,routerco_mac) values ('r1v1' , 'TEST001R');
+2015-05-09 20:23:06,854 - DEBUG: _addContent : dict_keys(['name', 'mobile', 'gender', 'contacts_name1', 'contacts_tel1', 'id_card_num']) ; dict_values(['XiaoHe', '13033331234', 'male', 'XiaoWang', '13033333214', '150214xxxxxxx'])
+2015-05-09 20:23:06,854 - DEBUG: Executing : insert into protege (name,mobile,gender,contacts_name1,contacts_tel1,id_card_num) values ('XiaoHe' , '13033331234' , 'male' , 'XiaoWang' , '13033333214' , '150214xxxxxxx');
+2015-05-09 20:23:06,855 - DEBUG: _getId : dict_keys(['cushion_mac']) ; dict_values(['TEST001C'])
+2015-05-09 20:23:06,855 - DEBUG: select id from cushion WHERE   cushion_mac = 'TEST001C';
+2015-05-09 20:23:06,855 - DEBUG: Executing : select id from cushion WHERE   cushion_mac = 'TEST001C';
+2015-05-09 20:23:06,855 - DEBUG: _getId : dict_keys(['routerco_mac']) ; dict_values(['TEST001R'])
+2015-05-09 20:23:06,855 - DEBUG: select id from router WHERE   routerco_mac = 'TEST001R';
+2015-05-09 20:23:06,855 - DEBUG: Executing : select id from router WHERE   routerco_mac = 'TEST001R';
+2015-05-09 20:23:06,857 - DEBUG: _getId : dict_keys(['id_card_num']) ; dict_values(['150214xxxxxxx'])
+2015-05-09 20:23:06,857 - DEBUG: select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:23:06,857 - DEBUG: Executing : select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:23:06,857 - DEBUG: _addContent : dict_keys(['router_id', 'cushion_id', 'protege_id']) ; dict_values([34, 39, 80])
+2015-05-09 20:23:06,858 - DEBUG: Executing : insert into location (router_id,cushion_id,protege_id) values (34 , 39 , 80);
+2015-05-09 20:23:06,859 - DEBUG: _getId : dict_keys(['router_id', 'cushion_id', 'protege_id']) ; dict_values([34, 39, 80])
+2015-05-09 20:23:06,859 - DEBUG: select id from location WHERE   router_id = 34  and  cushion_id = 39  and  protege_id = 80;
+2015-05-09 20:23:06,859 - DEBUG: Executing : select id from location WHERE   router_id = 34  and  cushion_id = 39  and  protege_id = 80;
+2015-05-09 20:23:06,861 - DEBUG: Executing : delete from router WHERE id = 34;
+2015-05-09 20:23:06,864 - DEBUG: Executing : delete from cushion WHERE id = 39;
+2015-05-09 20:23:06,865 - DEBUG: Executing : delete from protege WHERE id = 80;
+2015-05-09 20:23:06,868 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:23:06,869 - DEBUG: _addContent : dict_keys(['type', 'cushion_mac']) ; dict_values(['r1v1', 'TEST001C'])
+2015-05-09 20:23:06,871 - DEBUG: Executing : insert into cushion (type,cushion_mac) values ('r1v1' , 'TEST001C');
+2015-05-09 20:23:06,895 - DEBUG: _addContent : dict_keys(['type', 'routerco_mac']) ; dict_values(['r1v1', 'TEST001R'])
+2015-05-09 20:23:06,895 - DEBUG: Executing : insert into router (type,routerco_mac) values ('r1v1' , 'TEST001R');
+2015-05-09 20:23:06,900 - DEBUG: _addContent : dict_keys(['name', 'mobile', 'gender', 'contacts_name1', 'contacts_tel1', 'id_card_num']) ; dict_values(['XiaoHe', '13033331234', 'male', 'XiaoWang', '13033333214', '150214xxxxxxx'])
+2015-05-09 20:23:06,900 - DEBUG: Executing : insert into protege (name,mobile,gender,contacts_name1,contacts_tel1,id_card_num) values ('XiaoHe' , '13033331234' , 'male' , 'XiaoWang' , '13033333214' , '150214xxxxxxx');
+2015-05-09 20:23:06,903 - DEBUG: _getId : dict_keys(['cushion_mac']) ; dict_values(['TEST001C'])
+2015-05-09 20:23:06,903 - DEBUG: select id from cushion WHERE   cushion_mac = 'TEST001C';
+2015-05-09 20:23:06,903 - DEBUG: Executing : select id from cushion WHERE   cushion_mac = 'TEST001C';
+2015-05-09 20:23:06,904 - DEBUG: _getId : dict_keys(['routerco_mac']) ; dict_values(['TEST001R'])
+2015-05-09 20:23:06,904 - DEBUG: select id from router WHERE   routerco_mac = 'TEST001R';
+2015-05-09 20:23:06,904 - DEBUG: Executing : select id from router WHERE   routerco_mac = 'TEST001R';
+2015-05-09 20:23:06,904 - DEBUG: _getId : dict_keys(['id_card_num']) ; dict_values(['150214xxxxxxx'])
+2015-05-09 20:23:06,904 - DEBUG: select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:23:06,904 - DEBUG: Executing : select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:23:06,904 - DEBUG: _addContent : dict_keys(['router_id', 'cushion_id', 'protege_id']) ; dict_values([35, 40, 81])
+2015-05-09 20:23:06,904 - DEBUG: Executing : insert into location (router_id,cushion_id,protege_id) values (35 , 40 , 81);
+2015-05-09 20:23:06,907 - DEBUG: _getId : dict_keys(['router_id', 'cushion_id', 'protege_id']) ; dict_values([35, 40, 81])
+2015-05-09 20:23:06,907 - DEBUG: select id from location WHERE   router_id = 35  and  cushion_id = 40  and  protege_id = 81;
+2015-05-09 20:23:06,907 - DEBUG: Executing : select id from location WHERE   router_id = 35  and  cushion_id = 40  and  protege_id = 81;
+2015-05-09 20:23:06,907 - DEBUG: _addContent : dict_keys(['type']) ; dict_values(['r1v1'])
+2015-05-09 20:23:06,907 - DEBUG: Executing : insert into signal_type (type) values ('r1v1');
+2015-05-09 20:23:06,908 - DEBUG: _getId : dict_keys(['type']) ; dict_values(['r1v1'])
+2015-05-09 20:23:06,910 - DEBUG: select id from signal_type WHERE   type = 'r1v1';
+2015-05-09 20:23:06,910 - DEBUG: Executing : select id from signal_type WHERE   type = 'r1v1';
+2015-05-09 20:23:06,910 - DEBUG: _addContent : dict_keys(['location_id', 'signal_id']) ; dict_values([18, 27])
+2015-05-09 20:23:06,910 - DEBUG: Executing : insert into monitor_data (location_id,signal_id) values (18 , 27);
+2015-05-09 20:23:06,911 - DEBUG: _getId : dict_keys(['location_id', 'signal_id']) ; dict_values([18, 27])
+2015-05-09 20:23:06,911 - DEBUG: select id from monitor_data WHERE   location_id = 18  and  signal_id = 27;
+2015-05-09 20:23:06,911 - DEBUG: Executing : select id from monitor_data WHERE   location_id = 18  and  signal_id = 27;
+2015-05-09 20:23:06,911 - DEBUG: Executing : delete from router WHERE id = 35;
+2015-05-09 20:23:06,914 - DEBUG: Executing : delete from cushion WHERE id = 40;
+2015-05-09 20:23:06,914 - DEBUG: Executing : delete from protege WHERE id = 81;
+2015-05-09 20:23:06,917 - DEBUG: Executing : delete from signal_type WHERE id = 27;
+2015-05-09 20:23:06,917 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:23:06,921 - DEBUG: _addContent : dict_keys(['name', 'mobile', 'gender', 'contacts_name1', 'contacts_tel1', 'id_card_num']) ; dict_values(['XiaoHe', '13033331234', 'male', 'XiaoWang', '13033333214', '150214xxxxxxx'])
+2015-05-09 20:23:06,921 - DEBUG: Executing : insert into protege (name,mobile,gender,contacts_name1,contacts_tel1,id_card_num) values ('XiaoHe' , '13033331234' , 'male' , 'XiaoWang' , '13033333214' , '150214xxxxxxx');
+2015-05-09 20:23:06,924 - DEBUG: _getId : dict_keys(['name']) ; dict_values(['XiaoHe'])
+2015-05-09 20:23:06,924 - DEBUG: select id from protege WHERE   name = 'XiaoHe';
+2015-05-09 20:23:06,924 - DEBUG: Executing : select id from protege WHERE   name = 'XiaoHe';
+2015-05-09 20:23:06,924 - DEBUG: Executing : update protege set name = 'XiaoRan' WHERE id = 82;
+2015-05-09 20:23:06,926 - DEBUG: select name from protege WHERE id = 82;
+2015-05-09 20:23:06,927 - DEBUG: Executing : select name from protege WHERE id = 82;
+2015-05-09 20:23:06,927 - DEBUG: Executing : delete from protege WHERE id = 82;
+2015-05-09 20:23:06,930 - DEBUG: _getId : dict_keys(['name']) ; dict_values(['XiaoRan'])
+2015-05-09 20:23:06,930 - DEBUG: select id from protege WHERE   name = 'XiaoRan';
+2015-05-09 20:23:06,930 - DEBUG: Executing : select id from protege WHERE   name = 'XiaoRan';
+2015-05-09 20:23:06,930 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:23:06,931 - DEBUG: _addContent : dict_keys(['type', 'routerco_mac']) ; dict_values(['r1v1', 'TEST001'])
+2015-05-09 20:23:06,931 - DEBUG: Executing : insert into router (type,routerco_mac) values ('r1v1' , 'TEST001');
+2015-05-09 20:23:06,934 - DEBUG: _getId : dict_keys(['routerco_mac']) ; dict_values(['TEST001'])
+2015-05-09 20:23:06,934 - DEBUG: select id from router WHERE   routerco_mac = 'TEST001';
+2015-05-09 20:23:06,934 - DEBUG: Executing : select id from router WHERE   routerco_mac = 'TEST001';
+2015-05-09 20:23:06,934 - DEBUG: Executing : update router set type = 'r1v2' WHERE id = 36;
+2015-05-09 20:23:06,936 - DEBUG: select type from router WHERE id = 36;
+2015-05-09 20:23:06,936 - DEBUG: Executing : select type from router WHERE id = 36;
+2015-05-09 20:23:06,937 - DEBUG: Executing : delete from router WHERE id = 36;
+2015-05-09 20:23:06,940 - DEBUG: _getId : dict_keys(['routerco_mac']) ; dict_values(['TEST001'])
+2015-05-09 20:23:06,941 - DEBUG: select id from router WHERE   routerco_mac = 'TEST001';
+2015-05-09 20:23:06,941 - DEBUG: Executing : select id from router WHERE   routerco_mac = 'TEST001';
+2015-05-09 20:23:06,941 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:23:06,944 - DEBUG: _addContent : dict_keys(['attribute', 'value']) ; dict_values(['r1v1', 'TEST001'])
+2015-05-09 20:23:06,944 - DEBUG: Executing : insert into setting (attribute,value) values ('r1v1' , 'TEST001');
+2015-05-09 20:23:06,944 - DEBUG: _getId : dict_keys(['attribute']) ; dict_values(['r1v1'])
+2015-05-09 20:23:06,946 - DEBUG: select id from setting WHERE   attribute = 'r1v1';
+2015-05-09 20:23:06,946 - DEBUG: Executing : select id from setting WHERE   attribute = 'r1v1';
+2015-05-09 20:23:06,946 - DEBUG: Executing : update setting set attribute = 'r1v2' WHERE id = 18;
+2015-05-09 20:23:06,947 - DEBUG: select attribute from setting WHERE id = 18;
+2015-05-09 20:23:06,947 - DEBUG: Executing : select attribute from setting WHERE id = 18;
+2015-05-09 20:23:06,947 - DEBUG: Executing : delete from setting WHERE id = 18;
+2015-05-09 20:23:06,948 - DEBUG: _getId : dict_keys(['attribute']) ; dict_values(['TEST001'])
+2015-05-09 20:23:06,948 - DEBUG: select id from setting WHERE   attribute = 'TEST001';
+2015-05-09 20:23:06,948 - DEBUG: Executing : select id from setting WHERE   attribute = 'TEST001';
+2015-05-09 20:23:06,950 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:23:06,951 - DEBUG: _addContent : dict_keys(['type']) ; dict_values(['r1v1'])
+2015-05-09 20:23:06,951 - DEBUG: Executing : insert into signal_type (type) values ('r1v1');
+2015-05-09 20:23:06,953 - DEBUG: _getId : dict_keys(['type']) ; dict_values(['r1v1'])
+2015-05-09 20:23:06,953 - DEBUG: select id from signal_type WHERE   type = 'r1v1';
+2015-05-09 20:23:06,953 - DEBUG: Executing : select id from signal_type WHERE   type = 'r1v1';
+2015-05-09 20:23:06,953 - DEBUG: Executing : update signal_type set type = 'r1v2' WHERE id = 28;
+2015-05-09 20:23:06,956 - DEBUG: select type from signal_type WHERE id = 28;
+2015-05-09 20:23:06,956 - DEBUG: Executing : select type from signal_type WHERE id = 28;
+2015-05-09 20:23:06,956 - DEBUG: Executing : delete from signal_type WHERE id = 28;
+2015-05-09 20:23:06,957 - DEBUG: _getId : dict_keys(['type']) ; dict_values(['r1v2'])
+2015-05-09 20:23:06,959 - DEBUG: select id from signal_type WHERE   type = 'r1v2';
+2015-05-09 20:23:06,959 - DEBUG: Executing : select id from signal_type WHERE   type = 'r1v2';
+2015-05-09 20:23:06,959 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:23:06,960 - DEBUG: _addContent : dict_keys(['staff_id', 'password', 'name', 'id_card_num']) ; dict_values(['212328000', 'helloWorld', 'Xiaoming', '150204xxxxxxx'])
+2015-05-09 20:23:06,960 - DEBUG: Executing : insert into staff (staff_id,password,name,id_card_num) values ('212328000' , 'helloWorld' , 'Xiaoming' , '150204xxxxxxx');
+2015-05-09 20:23:06,963 - DEBUG: _getId : dict_keys(['staff_id']) ; dict_values(['212328000'])
+2015-05-09 20:23:06,963 - DEBUG: select id from staff WHERE   staff_id = '212328000';
+2015-05-09 20:23:06,963 - DEBUG: Executing : select id from staff WHERE   staff_id = '212328000';
+2015-05-09 20:23:06,964 - DEBUG: Executing : update staff set name = 'Xiaoming2' WHERE id = 73;
+2015-05-09 20:23:06,973 - DEBUG: select name from staff WHERE id = 73;
+2015-05-09 20:23:06,973 - DEBUG: Executing : select name from staff WHERE id = 73;
+2015-05-09 20:23:06,973 - DEBUG: Executing : delete from staff WHERE id = 73;
+2015-05-09 20:23:06,974 - DEBUG: _getId : dict_keys(['name']) ; dict_values(['Xiaoming2'])
+2015-05-09 20:23:06,974 - DEBUG: select id from staff WHERE   name = 'Xiaoming2';
+2015-05-09 20:23:06,974 - DEBUG: Executing : select id from staff WHERE   name = 'Xiaoming2';
+2015-05-09 20:23:06,976 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:23:06,977 - DEBUG: _addContent : dict_keys(['staff_id', 'password', 'name', 'id_card_num']) ; dict_values(['212328000', 'helloWorld', 'Xiaoming', '150204xxxxxxx'])
+2015-05-09 20:23:06,977 - DEBUG: Executing : insert into staff (staff_id,password,name,id_card_num) values ('212328000' , 'helloWorld' , 'Xiaoming' , '150204xxxxxxx');
+2015-05-09 20:23:06,980 - DEBUG: _getId : dict_keys(['id_card_num']) ; dict_values(['150204xxxxxxx'])
+2015-05-09 20:23:06,980 - DEBUG: select id from staff WHERE   id_card_num = '150204xxxxxxx';
+2015-05-09 20:23:06,980 - DEBUG: Executing : select id from staff WHERE   id_card_num = '150204xxxxxxx';
+2015-05-09 20:23:06,982 - DEBUG: _addContent : dict_keys(['staff_id']) ; dict_values([74])
+2015-05-09 20:23:06,982 - DEBUG: Executing : insert into staff_online (staff_id) values (74);
+2015-05-09 20:23:06,986 - DEBUG: _getId : dict_keys(['staff_id']) ; dict_values([74])
+2015-05-09 20:23:06,986 - DEBUG: select id from staff_online WHERE   staff_id = 74;
+2015-05-09 20:23:06,986 - DEBUG: Executing : select id from staff_online WHERE   staff_id = 74;
+2015-05-09 20:23:06,986 - DEBUG: Executing : delete from staff WHERE id = 74;
+2015-05-09 20:23:06,989 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:23:06,990 - DEBUG: _addContent : dict_keys(['type', 'cushion_mac']) ; dict_values(['r1v1', 'TEST001C'])
+2015-05-09 20:23:06,990 - DEBUG: Executing : insert into cushion (type,cushion_mac) values ('r1v1' , 'TEST001C');
+2015-05-09 20:23:06,993 - DEBUG: _addContent : dict_keys(['type', 'routerco_mac']) ; dict_values(['r1v1', 'TEST001R'])
+2015-05-09 20:23:06,993 - DEBUG: Executing : insert into router (type,routerco_mac) values ('r1v1' , 'TEST001R');
+2015-05-09 20:23:06,996 - DEBUG: _addContent : dict_keys(['name', 'mobile', 'gender', 'contacts_name1', 'contacts_tel1', 'id_card_num']) ; dict_values(['XiaoHe', '13033331234', 'male', 'XiaoWang', '13033333214', '150214xxxxxxx'])
+2015-05-09 20:23:06,996 - DEBUG: Executing : insert into protege (name,mobile,gender,contacts_name1,contacts_tel1,id_card_num) values ('XiaoHe' , '13033331234' , 'male' , 'XiaoWang' , '13033333214' , '150214xxxxxxx');
+2015-05-09 20:23:06,999 - DEBUG: _getId : dict_keys(['cushion_mac']) ; dict_values(['TEST001C'])
+2015-05-09 20:23:06,999 - DEBUG: select id from cushion WHERE   cushion_mac = 'TEST001C';
+2015-05-09 20:23:06,999 - DEBUG: Executing : select id from cushion WHERE   cushion_mac = 'TEST001C';
+2015-05-09 20:23:07,000 - DEBUG: _getId : dict_keys(['routerco_mac']) ; dict_values(['TEST001R'])
+2015-05-09 20:23:07,000 - DEBUG: select id from router WHERE   routerco_mac = 'TEST001R';
+2015-05-09 20:23:07,000 - DEBUG: Executing : select id from router WHERE   routerco_mac = 'TEST001R';
+2015-05-09 20:23:07,000 - DEBUG: _getId : dict_keys(['id_card_num']) ; dict_values(['150214xxxxxxx'])
+2015-05-09 20:23:07,000 - DEBUG: select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:23:07,000 - DEBUG: Executing : select id from protege WHERE   id_card_num = '150214xxxxxxx';
+2015-05-09 20:23:07,000 - DEBUG: _addContent : dict_keys(['router_id', 'cushion_id', 'protege_id']) ; dict_values([37, 41, 83])
+2015-05-09 20:23:07,000 - DEBUG: Executing : insert into location (router_id,cushion_id,protege_id) values (37 , 41 , 83);
+2015-05-09 20:23:07,003 - DEBUG: _getId : dict_keys(['router_id', 'cushion_id', 'protege_id']) ; dict_values([37, 41, 83])
+2015-05-09 20:23:07,003 - DEBUG: select id from location WHERE   router_id = 37  and  cushion_id = 41  and  protege_id = 83;
+2015-05-09 20:23:07,003 - DEBUG: Executing : select id from location WHERE   router_id = 37  and  cushion_id = 41  and  protege_id = 83;
+2015-05-09 20:23:07,003 - DEBUG: _addContent : dict_keys(['type']) ; dict_values(['r1v1'])
+2015-05-09 20:23:07,003 - DEBUG: Executing : insert into signal_type (type) values ('r1v1');
+2015-05-09 20:23:07,006 - DEBUG: _getId : dict_keys(['type']) ; dict_values(['r1v1'])
+2015-05-09 20:23:07,006 - DEBUG: select id from signal_type WHERE   type = 'r1v1';
+2015-05-09 20:23:07,006 - DEBUG: Executing : select id from signal_type WHERE   type = 'r1v1';
+2015-05-09 20:23:07,006 - DEBUG: _addContent : dict_keys(['location_id', 'signal_id']) ; dict_values([19, 29])
+2015-05-09 20:23:07,006 - DEBUG: Executing : insert into monitor_data (location_id,signal_id) values (19 , 29);
+2015-05-09 20:23:07,007 - DEBUG: _getId : dict_keys(['location_id', 'signal_id']) ; dict_values([19, 29])
+2015-05-09 20:23:07,007 - DEBUG: select id from monitor_data WHERE   location_id = 19  and  signal_id = 29;
+2015-05-09 20:23:07,009 - DEBUG: Executing : select id from monitor_data WHERE   location_id = 19  and  signal_id = 29;
+2015-05-09 20:23:07,009 - DEBUG: _addContent : dict_keys(['type']) ; dict_values(['r1v1'])
+2015-05-09 20:23:07,009 - DEBUG: Executing : insert into warning_type (type) values ('r1v1');
+2015-05-09 20:23:07,009 - DEBUG: _getId : dict_keys(['type']) ; dict_values(['r1v1'])
+2015-05-09 20:23:07,010 - DEBUG: select id from warning_type WHERE   type = 'r1v1';
+2015-05-09 20:23:07,010 - DEBUG: Executing : select id from warning_type WHERE   type = 'r1v1';
+2015-05-09 20:23:07,010 - DEBUG: _addContent : dict_keys(['staff_id', 'password', 'name', 'id_card_num']) ; dict_values(['212328000', 'helloWorld', 'Xiaoming', '150204xxxxxxx'])
+2015-05-09 20:23:07,010 - DEBUG: Executing : insert into staff (staff_id,password,name,id_card_num) values ('212328000' , 'helloWorld' , 'Xiaoming' , '150204xxxxxxx');
+2015-05-09 20:23:07,013 - DEBUG: _getId : dict_keys(['staff_id']) ; dict_values(['212328000'])
+2015-05-09 20:23:07,013 - DEBUG: select id from staff WHERE   staff_id = '212328000';
+2015-05-09 20:23:07,013 - DEBUG: Executing : select id from staff WHERE   staff_id = '212328000';
+2015-05-09 20:23:07,015 - DEBUG: _addContent : dict_keys(['process_staff_id', 'warning_id', 'data_id']) ; dict_values([75, 2, 6])
+2015-05-09 20:23:07,015 - DEBUG: Executing : insert into warning (process_staff_id,warning_id,data_id) values (75 , 2 , 6);
+2015-05-09 20:23:07,016 - DEBUG: _getId : dict_keys(['process_staff_id', 'warning_id', 'data_id']) ; dict_values([75, 2, 6])
+2015-05-09 20:23:07,016 - DEBUG: select id from warning WHERE   process_staff_id = 75  and  warning_id = 2  and  data_id = 6;
+2015-05-09 20:23:07,016 - DEBUG: Executing : select id from warning WHERE   process_staff_id = 75  and  warning_id = 2  and  data_id = 6;
+2015-05-09 20:23:07,017 - DEBUG: Executing : delete from staff WHERE id = 75;
+2015-05-09 20:23:07,019 - DEBUG: Executing : delete from warning_type WHERE id = 2;
+2015-05-09 20:23:07,023 - DEBUG: Executing : delete from router WHERE id = 37;
+2015-05-09 20:23:07,026 - DEBUG: Executing : delete from cushion WHERE id = 41;
+2015-05-09 20:23:07,026 - DEBUG: Executing : delete from protege WHERE id = 83;
+2015-05-09 20:23:07,029 - DEBUG: Executing : delete from signal_type WHERE id = 29;
+2015-05-09 20:23:07,033 - DEBUG: connect database : host 127.0.0.1 ;  port 3306 ; user root ; passwd #bigguy ; db icare
+2015-05-09 20:23:07,036 - DEBUG: _addContent : dict_keys(['solution']) ; dict_values(['r1v1'])
+2015-05-09 20:23:07,036 - DEBUG: Executing : insert into quick_solution (solution) values ('r1v1');
+2015-05-09 20:23:07,039 - DEBUG: _getId : dict_keys(['solution']) ; dict_values(['r1v1'])
+2015-05-09 20:23:07,039 - DEBUG: select id from quick_solution WHERE   solution = 'r1v1';
+2015-05-09 20:23:07,039 - DEBUG: Executing : select id from quick_solution WHERE   solution = 'r1v1';
+2015-05-09 20:23:07,039 - DEBUG: Executing : update quick_solution set solution = 'r1v2' WHERE id = 18;
+2015-05-09 20:23:07,042 - DEBUG: select solution from quick_solution WHERE id = 18;
+2015-05-09 20:23:07,042 - DEBUG: Executing : select solution from quick_solution WHERE id = 18;
+2015-05-09 20:23:07,042 - DEBUG: Executing : delete from quick_solution WHERE id = 18;
+2015-05-09 20:23:07,045 - DEBUG: _getId : dict_keys(['solution']) ; dict_values(['r1v2'])
+2015-05-09 20:23:07,045 - DEBUG: select id from quick_solution WHERE   solution = 'r1v2';
+2015-05-09 20:23:07,045 - DEBUG: Executing : select id from quick_solution WHERE   solution = 'r1v2';
