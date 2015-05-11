@@ -82,9 +82,11 @@ class MySqlDb:
 		self._dbconnection.commit()
 
 	def _addMany(self,table,colName,valueMat):
-		logger.debug("_addContent : %s ; %s" % (table,par))
-		sqlStatement  =  "insert into %s (%s) values (%s);"%(table,','.join(colName))
+		logger.debug("_addContent : %s ; %s ;%s" % (table,colName,valueMat))
+		sqlStatement  =  "insert into %s (%s) values "%(table,','.join(colName))
+		sqlStatement = sqlStatement + "("+(len(colName)*"%s,")[0:-1]+");"
 		self.__execute_sql_many(self._cur, sqlStatement,valueMat)
+		self._dbconnection.commit()
 
 	def __execute_sql(self, cur, sqlStatement):
 		logger.debug("Executing : %s" % sqlStatement)
@@ -92,4 +94,5 @@ class MySqlDb:
 
 	def __execute_sql_many(self, cur, sqlStatement,par):
 		logger.debug("Executing many : %s" % sqlStatement)
+		logger.debug(par)
 		return cur.executemany(sqlStatement,par)

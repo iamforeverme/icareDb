@@ -11,6 +11,9 @@ class iCareDb (MySqlDb):
 	def add(self,table,para):
 		self._addContent(table,para.keys(),para.values())
 
+	def addMany(self,table,attTu,valTu):
+		self._addMany(table,attTu,valTu)
+
 	def rm(self,table,idList):
 		for id in idList:
 			self._rmContent(table,id)

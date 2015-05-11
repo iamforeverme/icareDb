@@ -217,6 +217,60 @@ class iCareDatabaseTestCase(unittest.TestCase):
 		self._db.rm("protege",(protegeId,))
 		self._db.rm("signal_type",(signalTypeId,))
 
+	def testInsertTime(self):
+		self._db.add("cushion",{'type':"r1v1",'cushion_mac':"TEST001C"})
+		self._db.add("router",{'type':"r1v1",'routerco_mac':"TEST001R"})
+		self._db.add("protege",{'gender':"male",'name':"XiaoHe","id_card_num":"150214xxxxxxx","mobile":"13033331234","contacts_name1":"XiaoWang","contacts_tel1":"13033333214"})
+
+		cushionId = self._db.queryId("cushion",{"cushion_mac":"TEST001C"})[0]
+		routerId = self._db.queryId("router",{"routerco_mac":"TEST001R"})[0]
+		protegeId = self._db.queryId("protege",{"id_card_num":"150214xxxxxxx"})[0]
+		self._db.add("location",{'cushion_id':cushionId,'router_id':routerId,"protege_id":protegeId})
+		locationId = self._db.queryId("location",{'router_id':routerId,'protege_id':protegeId,'cushion_id':cushionId})[0]
+
+		self._db.add("signal_type",{'type':"r1v1"})
+		signalTypeId = self._db.queryId("signal_type",{"type":"r1v1"})[0]
+
+		
+
+		self._db.add("monitor_data",{'signal_id':signalTypeId,'location_id':locationId,'rec_time':"2009-12-02 12:14"})
+		dataId = self._db.queryId("monitor_data",{'signal_id':signalTypeId,'location_id':locationId})[0]
+
+		assert( dataId )
+
+		self._db.rm("router",(routerId,))
+		self._db.rm("cushion",(cushionId,))
+		self._db.rm("protege",(protegeId,))
+		self._db.rm("signal_type",(signalTypeId,))
+
+	def testAddMany(self):
+		self._db.add("cushion",{'type':"r1v1",'cushion_mac':"TEST001C"})
+		self._db.add("router",{'type':"r1v1",'routerco_mac':"TEST001R"})
+		self._db.add("protege",{'gender':"male",'name':"XiaoHe","id_card_num":"150214xxxxxxx","mobile":"13033331234","contacts_name1":"XiaoWang","contacts_tel1":"13033333214"})
+
+		cushionId = self._db.queryId("cushion",{"cushion_mac":"TEST001C"})[0]
+		routerId = self._db.queryId("router",{"routerco_mac":"TEST001R"})[0]
+		protegeId = self._db.queryId("protege",{"id_card_num":"150214xxxxxxx"})[0]
+		self._db.add("location",{'cushion_id':cushionId,'router_id':routerId,"protege_id":protegeId})
+		locationId = self._db.queryId("location",{'router_id':routerId,'protege_id':protegeId,'cushion_id':cushionId})[0]
+
+		self._db.add("signal_type",{'type':"r1v1"})
+		signalTypeId = self._db.queryId("signal_type",{"type":"r1v1"})[0]
+
+		
+
+		self._db.addMany("monitor_data",('signal_id','location_id','rec_time'),((signalTypeId,locationId,"2009-12-02 12:14"),
+			(signalTypeId,locationId,"2009-12-05 12:14")))
+
+
+		dataId = self._db.queryId("monitor_data",{'signal_id':signalTypeId,'location_id':locationId})[0]
+		
+		assert( dataId )
+
+		self._db.rm("router",(routerId,))
+		self._db.rm("cushion",(cushionId,))
+		self._db.rm("protege",(protegeId,))
+		self._db.rm("signal_type",(signalTypeId,))
 
 	def testException(self):
 		try:
