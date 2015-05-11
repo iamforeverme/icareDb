@@ -39,11 +39,11 @@ class MySqlDb:
 		
 		values = values[4:-1] 
 		selectStatement =  "select id from %s WHERE %s;"%(table,values)
-		logger.debug(selectStatement)
 		self.__execute_sql(self._cur, selectStatement)
 		allRows = self._cur.fetchall()
+		returnVal = [item[0] for item in allRows]
 		if(allRows):
-			return allRows[0]
+			return returnVal
 		else:
 			return None
 
